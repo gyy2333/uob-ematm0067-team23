@@ -41,7 +41,7 @@ TF-IDF
 •	Captures importance of words
 •	Highly interpretable
 N-grams
-•	Captures phrases (used ngrams-(2,3)
+•	Captures phrases (used ngrams-(2,3))
 •	Improves contextual understanding
 Embeddings
 •	Captures semantic meaning
