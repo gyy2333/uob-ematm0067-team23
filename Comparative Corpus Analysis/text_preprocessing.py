@@ -3,6 +3,7 @@ import pandas as pd
 import re
 import numpy as np
 import pickle
+import os
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
@@ -72,7 +73,8 @@ def preprocess_text(df):
 
     df["clean_text"] = df["abstract"].apply(pipeline)
     print("Sample cleaned text", df["clean_text"].iloc[100])
-    df.to_csv("../data/modeling/ai_ml_nlp_dataset_labeled.csv", index=False)
+    df.to_csv("../data/modeling/ai_ml_nlp_dataset_processed.csv", index=False)
+    df.to_csv("../outputs/pre_processed/ai_ml_nlp_dataset_processed.csv", index=False)
     return df
 
 
@@ -81,10 +83,10 @@ def tfidf_representation(df):
     tfidf = TfidfVectorizer(max_features=5000)
     X = tfidf.fit_transform(df["clean_text"])
 
-    save_npz("../data/pre_processed/tfidf_matrix.npz", X)
+    save_npz("../outputs/pre_processed/tfidf_matrix.npz", X)
     print("TF-IDF Matrix saved!")
 
-    with open("../data/pre_processed/tfidf_vocab.pkl", "wb") as f:
+    with open("../outputs/pre_processed/tfidf_vocab.pkl", "wb") as f:
         pickle.dump(tfidf.vocabulary_, f)
 
     print("TF_IDF vocabulary saved")
@@ -105,7 +107,7 @@ def top_keywords(tfidf, X, top_n=100):
 
     keywords_df = pd.DataFrame({"word": top_words})
 
-    keywords_df.to_csv("../data/pre_processed/top_keywords.csv", index=False)
+    keywords_df.to_csv("../outputs/pre_processed/top_keywords.csv", index=False)
     print("Top keywords saved!")
 
     print(len(top_words))
@@ -133,7 +135,7 @@ def keywords_by_period(df):
             rows.append({"period": period, "word": features[i], "score": sums[i]})
 
     pd.DataFrame(rows).to_csv(
-        "../data/pre_processed/keywords_by_period.csv", index=False
+        "../outputs/pre_processed/keywords_by_period.csv", index=False
     )
 
     print("Keywords by periods saved")
@@ -158,7 +160,7 @@ def keywords_by_category(df):
             rows.append({"category": cat, "word": features[i], "score": sums[i]})
 
     pd.DataFrame(rows).to_csv(
-        "../data/pre_processed/keywords_by_category.csv", index=False
+        "../outputs/pre_processed/keywords_by_category.csv", index=False
     )
 
     print("Keywords by category saved")
@@ -171,7 +173,7 @@ def ngram_representation(df):
     X_ngram = tfidf_ngram.fit_transform(df["clean_text"])
     print("N-gram matrix shape:", X_ngram.shape)
 
-    save_npz("../data/pre_processed/ngram_matrix.npz", X_ngram)
+    save_npz("../outputs/pre_processed/ngram_matrix.npz", X_ngram)
 
     print("N-grams saved")
 
@@ -185,7 +187,7 @@ def generate_embeddings(df):
     model = SentenceTransformer("all-MiniLM-L6-v2")
     X_embed = model.encode(df["clean_text"], show_progress_bar=True)
 
-    np.save("../data/pre_processed/embaddings.npy", X_embed)
+    np.save("../outputs/pre_processed/embaddings.npy", X_embed)
 
     print("Embeddings saved")
 
@@ -219,7 +221,7 @@ def similarity_analysis(df, X_embed):
     sim_df.index = periods
     sim_df.columns = periods
 
-    sim_df.to_csv("../data/pre_processed/similarity_matrix.csv")
+    sim_df.to_csv("../outputs/pre_processed/similarity_matrix.csv")
 
     print("Similarity mareix saved")
     print(sim_df)
@@ -243,22 +245,24 @@ def classification(df):
 
 
 def main():
-    path = "../data/raw_data/ai_ml_nlp_datasetv11.csv"
+    path = "../data/raw_data/ai_ml_nlp_dataset.csv"
+    output_path = "../outputs/pre_processed"
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
     df = load_data(path)
     df = preprocess_text(df)
 
-    # tfidf, X = tfidf_representation(df)
-    # top_keywords(tfidf, X)
-    # keywords_by_period(df)
-    # keywords_by_category(df)
+    tfidf, X = tfidf_representation(df)
+    top_keywords(tfidf, X)
+    keywords_by_period(df)
+    keywords_by_category(df)
 
-    # ngram_representation(df)
+    ngram_representation(df)
 
-    # X_embed = generate_embeddings(df)
-    # similarity_analysis(df, X_embed)
+    X_embed = generate_embeddings(df)
+    similarity_analysis(df, X_embed)
 
-    # classification(df)
+    classification(df)
 
 
 if __name__ == "__main__":
