@@ -79,12 +79,13 @@ def preprocess_text(df):
 
 ## TF-IDF
 def tfidf_representation(df):
+    df = df.dropna(subset=['clean_text']) 
     tfidf = TfidfVectorizer(max_features=5000)
     X = tfidf.fit_transform(df["clean_text"])
 
     save_npz("outputs/pre_processed/tfidf_matrix.npz", X)
     print("TF-IDF Matrix saved!")
-
+    
     with open("outputs/pre_processed/tfidf_vocab.pkl", "wb") as f:
         pickle.dump(tfidf.vocabulary_, f)
 
