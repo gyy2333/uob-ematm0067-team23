@@ -31,7 +31,7 @@ def main():
 
     bert_model = Modeling.create(
         "bert",
-        data_path=output_path + "pre_processed/",
+        data_path=output_path + "pre_processed/ai_ml_nlp_dataset_processed.csv",
         output_path=output_path + "modeling/",
     )
     bert_model.process()

@@ -64,38 +64,38 @@ class BERT(Modeling):
             verbose=False,
         )
 
-    def train_model_period(
+    def train_period_model(
         self,
-        period,
-        text_col="clean_text",
-        period_col="period",
+        variable,
+        obs_name="clean_text",
+        variable_name="variable",
     ):
-        df_refined = self._df[self._df[period_col] == period].copy()
-        self._period_filt_txt = df_refined[text_col].dropna().tolist()
+        obs_refined = self._df[self._df[variable_name] == variable].copy()
+        self._period_filt_txt = obs_refined[obs_name].dropna().tolist()
 
         if len(self._period_filt_txt) < 20:
             print(
-                f"Period {period}: only {len(self._period_filt_txt)} documents, skipping tarining BERT."
+                f"Period {variable}: only {len(self._period_filt_txt)} documents, skipping tarining BERT."
             )
             return False
 
         print(
-            f"\n=== BERTopic analysis for period: {period} ({len(self._period_filt_txt)} docs) ==="
+            f"\n=== BERTopic analysis for variable: {variable} ({len(self._period_filt_txt)} docs) ==="
         )
         self._period_topics, self._period_probs = self._period_model.fit_transform(
             self._period_filt_txt
         )
         return True
 
-    def train_model_global(
+    def train_global_model(
         self,
-        text_col="clean_text",
-        period_col="period",
+        obs_name="clean_text",
+        variable_name="period",
     ):
-        if period_col not in self._df.columns:
-            raise ValueError(f"Column '{period_col}' not found in dataframe.")
+        if variable_name not in self._df.columns:
+            raise ValueError(f"Column '{variable_name}' not found in dataframe.")
 
-        self._glob_filt_txt = self._df[text_col].fillna("").tolist()
+        self._glob_filt_txt = self._df[obs_name].fillna("").tolist()
         print(
             f"Fitting global BERTopic model to {len(self._glob_filt_txt)} documents..."
         )
@@ -118,10 +118,10 @@ class BERT(Modeling):
         heat_map = model.visualize_heatmap()
         heat_map.write_html(save_fig_path + "heat_map.html")
 
-    def save_output(self, model, period):
+    def save_output(self, model, variable):
         topic_info = model.get_topic_info()
         topic_info.to_csv(
-            self.output_path + f"Modelingbertopic_{period}_topic_info.csv",
+            self.output_path + f"Modelingbertopic_{variable}_topic_info.csv",
             index=False,
         )
 
@@ -131,14 +131,16 @@ class BERT(Modeling):
                 continue
             summary.append(
                 {
-                    "period": period,
+                    "period": variable,
                     "topic": int(row.Topic),
                     "count": int(row.Count),
                     "name": row.Name,
                 }
             )
         summary_df = pd.DataFrame(summary)
-        summary_df_path = self.output_path + f"Modelingbertopic_topics_by_{period}.csv"
+        summary_df_path = (
+            self.output_path + f"Modelingbertopic_topics_by_{variable}.csv"
+        )
         summary_df.to_csv(summary_df_path, index=False)
 
     def process(self):
@@ -147,7 +149,7 @@ class BERT(Modeling):
         periods = sorted(self._df["period"].dropna().unique())
         for period in periods:
             self._period_model = self.build_model(n_neighbors=20, min_cluster_size=20)
-            train_success = self.train_model_period(period)
+            train_success = self.train_period_model(period)
             if not train_success:
                 print(f"[{period}]: no saving output files and figures")
                 continue
@@ -156,6 +158,6 @@ class BERT(Modeling):
             print(f"[{period}]: finish saving output files and figures")
 
         self._global_model = self.build_model(n_neighbors=40, min_cluster_size=40)
-        self.train_model_global()
+        self.train_global_model()
         self.visualization(self._global_model, self._glob_filt_txt, "global")
         self.save_output(self._global_model, "global")
