@@ -247,7 +247,7 @@ def classification(df):
 def main():
     path = "../data/raw_data/ai_ml_nlp_dataset.csv"
     output_path = "../outputs/pre_processed"
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    os.makedirs(output_path, exist_ok=True)
 
     df = load_data(path)
     df = preprocess_text(df)

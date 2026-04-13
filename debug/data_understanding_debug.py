@@ -193,7 +193,7 @@ def check_imbalance(final_df):
 ## saving the final data to csv file
 # SAVING THE DATA IN .CSV FILE
 def save_data(df):
-    os.makedirs(os.path.dirname("../data/raw_data/"), exist_ok=True)
+    os.makedirs("../data/raw_data/", exist_ok=True)
     df.to_csv("../data/raw_data/ai_ml_nlp_dataset.csv", index=False)
     print("Dataset saved sucessfully!")
 
