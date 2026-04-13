@@ -38,7 +38,7 @@ def main():
 
     lda_model = Modeling.create(
         "lda",
-        data_path=output_path + "pre_processed/",
+        data_path=output_path + "pre_processed/ai_ml_nlp_dataset_processed.csv",
         output_path=output_path + "modeling/",
     )
     lda_model.process()

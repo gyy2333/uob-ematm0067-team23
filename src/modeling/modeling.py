@@ -127,7 +127,7 @@ class Modeling:
     _registry = {}  # Subclass registry
 
     def __init__(self, data_path, output_path):
-        self.data_path = data_path + "ai_ml_nlp_dataset_processed.csv"
+        self.data_path = data_path
         self.output_path = output_path
 
         self._df = None
