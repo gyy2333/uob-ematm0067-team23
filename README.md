@@ -57,7 +57,7 @@ PCA (Principal Component Analysis)
 •	Visualised temporal drift and research evolution
 
 ## Run
-'''{bash}
+```{bash}
 cd uob-ematm0067-team23
 bash src/run.sh
-'''
+```
