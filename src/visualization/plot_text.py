@@ -200,7 +200,7 @@ class ArxivUltimateVisualizer:
         print("Loading data resources...")
         try:
             self.data["df"] = pd.read_csv(
-                f"{self.data_dir}/processed_dataset_final.csv",
+                f"{self.data_dir}/ai_ml_nlp_dataset_processed.csv",
                 dtype={0: str},
                 low_memory=False,
             )
@@ -325,16 +325,22 @@ class ArxivUltimateVisualizer:
             if self.data["vocab"] is None:
                 return "Dim Low", "Dim High"
 
+            idx_to_word = {v: k for k, v in self.data["vocab"].items()}
+
             idx = comp.argsort()
             valid = lambda w: str(w).lower() not in STOPWORDS
 
             low_terms = [
-                self.data["vocab"][i] for i in idx if valid(self.data["vocab"][i])
+                idx_to_word[i] for i in idx if valid(idx_to_word[i])
             ]
             high_terms = [
-                self.data["vocab"][i] for i in idx[::-1] if valid(self.data["vocab"][i])
+                idx_to_word[i] for i in idx[::-1] if valid(idx_to_word[i])
             ]
-            return low_terms[0], high_terms[0]
+            
+            low_label = low_terms[0] if low_terms else "Low"
+            high_label = high_terms[0] if high_terms else "High"
+            
+            return low_label, high_label
 
         x_labels, y_labels = get_axis_labels(svd.components_[0]), get_axis_labels(
             svd.components_[1]
