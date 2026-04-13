@@ -145,7 +145,7 @@ class Modeling:
         model_class = cls._registry.get(model_type.lower())
         if model_class is None:
             raise ValueError(
-                f"未知类型: {model_type}，可用: {list(cls._registry.keys())}"
+                f"Unknown type: {model_type}, available: {list(cls._registry.keys())}"
             )
         return model_class(**kwargs)
 
