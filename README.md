@@ -2,15 +2,15 @@
 
 AI Text Analytics Project: Preprocessing, Topic Modeling, and Trend Analysis
 
-Overview
+## Overview
 This project analyses a large corpus of scientific abstracts to understand how research focus, framing, and communication have evolved over time in the fields of Artificial Intelligence (AI), Machine Learning (ML), and Natural Language Processing (NLP).
 The analysis applies multiple text analytics techniques including TF-IDF, n-grams, embeddings, classification, Keyword analysis, and PCA to extract insights and compare different analytical approaches.
-Objective
+### Objective
 •	Analyse how research topics and terminology have changed over time
 •	Compare AI, ML, and NLP subfields
 •	Evaluate how different text analysis methods affect insights
 •	Identify temporal drift in research using dimensionality reduction
-Preprocessing steps:
+### Preprocessing steps:
 •	Extracted year from id
 •	Created time periods:
 o	1991–1998
@@ -18,8 +18,7 @@ o	1999–2006
 o	2007–2014
 o	2015–2021
 •	Filtered dataset to focus on: ['cs.AI', 'cs.LG', 'cs.CL']
-
- Methodology
+### Methodology
  1. Data Cleaning
 •	Removed unnecessary columns
 •	Handled missing values
@@ -56,3 +55,9 @@ Classification
 PCA (Principal Component Analysis)
 •	Reduced high-dimensional TF-IDF vectors to 2D
 •	Visualised temporal drift and research evolution
+
+## Run
+'''{bash}
+cd uob-ematm0067-team23
+bash src/run.sh
+'''

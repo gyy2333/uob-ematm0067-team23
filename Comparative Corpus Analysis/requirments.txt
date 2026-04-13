@@ -1,8 +1,0 @@
-pandas 
-json
-matplotlib.pyplot
-re
-nltk
-sklearn
-numpy
-sentence-transformers
