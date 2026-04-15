@@ -68,7 +68,7 @@ class BERT(Modeling):
         self,
         variable,
         obs_name="clean_text",
-        variable_name="variable",
+        variable_name="period",
     ):
         obs_refined = self._df[self._df[variable_name] == variable].copy()
         self._period_filt_txt = obs_refined[obs_name].dropna().tolist()
@@ -80,7 +80,7 @@ class BERT(Modeling):
             return False
 
         print(
-            f"\n=== BERTopic analysis for variable: {variable} ({len(self._period_filt_txt)} docs) ==="
+            f"\n=== BERTopic analysis for period: {variable} ({len(self._period_filt_txt)} docs) ==="
         )
         self._period_topics, self._period_probs = self._period_model.fit_transform(
             self._period_filt_txt
