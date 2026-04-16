@@ -550,8 +550,10 @@ class ArxivUltimateVisualizer:
         plt.close()
 
 
-def main():
-    viz = ArxivUltimateVisualizer()
+def main(
+        data_dir="outputs/pre_processed/", 
+        plot_dir="outputs/visualization/"):
+    viz = ArxivUltimateVisualizer(data_dir, plot_dir)
     if viz.load_all_data():
         viz.plot_1_growth()
         viz.plot_2_cloud()

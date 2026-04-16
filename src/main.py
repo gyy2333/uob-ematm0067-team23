@@ -2,7 +2,8 @@ import argparse
 from pre_processing.data_understanding import main as load_data
 from pre_processing.text_preprocessing import main as preprocessing
 from modeling.modeling import Modeling
-from visualization.plot_text import main as visualization
+from visualization.plot_text import main as text_viz
+from visualization.plot_comaprison import main as bert_viz
 
 
 def main():
@@ -43,11 +44,15 @@ def main():
     )
     lda_model.process()
 
-    visualization(
+    text_viz(
         data_dir=output_path + "pre_processed/",
         plot_dir=output_path + "visualization/",
     )
 
+    bert_viz(
+        csv_path=output_path + "modeling/bertopic/Modelingbertopic_topics_merged.csv",
+        plot_dir=output_path + "visualization/"
+    )
 
 if __name__ == "__main__":
     main()
