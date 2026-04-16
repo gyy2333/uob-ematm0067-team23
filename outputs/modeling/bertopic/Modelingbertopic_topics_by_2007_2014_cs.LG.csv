@@ -1,0 +1,59 @@
+period_category,topic,count,name
+2007_2014_cs.LG,0,195,0_policy_reinforcement_reinforcement learn_value function
+2007_2014_cs.LG,1,171,1_cluster_clustering_mean_spectral cluster
+2007_2014_cs.LG,2,141,2_gradient_convergence_stochastic_convergence rate
+2007_2014_cs.LG,3,122,3_link_graph_node_network
+2007_2014_cs.LG,4,120,4_convolutional_convolutional neural_image_object
+2007_2014_cs.LG,5,119,5_submodular_submodular function_epsilon_eps
+2007_2014_cs.LG,6,99,6_arm_bandit_regret_reward
+2007_2014_cs.LG,7,94,7_lasso_group lasso_group_norm
+2007_2014_cs.LG,8,92,8_recommendation_item_user_rating
+2007_2014_cs.LG,9,76,9_speech_speaker_recurrent_rnns
+2007_2014_cs.LG,10,75,10_bayesian network_bayesian_score_network
+2007_2014_cs.LG,11,73,11_topic_lda_document_latent dirichlet
+2007_2014_cs.LG,12,71,12_matrix completion_completion_matrix_rank matrix
+2007_2014_cs.LG,13,69,13_gene_cancer_selection_gene expression
+2007_2014_cs.LG,14,68,14_expert_regret_online_regret bound
+2007_2014_cs.LG,15,65,15_svm_support vector_vector machine_support
+2007_2014_cs.LG,16,65,16_metric_metric learn_distance_distance metric
+2007_2014_cs.LG,17,60,17_crfs_conditional random_crf_sentence
+2007_2014_cs.LG,18,59,18_channel_radio_user_wireless
+2007_2014_cs.LG,19,56,19_dictionary_sparse cod_cod_sparse
+2007_2014_cs.LG,20,54,20_nmf_nonnegative_nonnegative matrix_factorization nmf
+2007_2014_cs.LG,21,53,21_active_active learn_label complexity_tsybakov
+2007_2014_cs.LG,22,52,22_mixture_dirichlet_regression mixture_dirichlet mixture
+2007_2014_cs.LG,23,51,23_manifold_riemannian_riemannian manifold_manifold learn
+2007_2014_cs.LG,24,49,24_kernel_mkl_kernel learn_multiple kernel
+2007_2014_cs.LG,25,48,25_neuron_deep_neural network_unit
+2007_2014_cs.LG,26,47,26_ensemble_diversity_classifier_ensemble classifier
+2007_2014_cs.LG,27,47,27_sparse signal_measurement_signal_recovery
+2007_2014_cs.LG,28,47,28_graphical_gaussian graphical_gaussian_inverse covariance
+2007_2014_cs.LG,29,46,29_bethe_free energy_bethe free_belief propagation
+2007_2014_cs.LG,30,45,30_ml_graphlab_mapreduce_distribute
+2007_2014_cs.LG,31,45,31_causal_cause_causal inference_causal discovery
+2007_2014_cs.LG,32,44,32_ranking_rank_ndcg_learn rank
+2007_2014_cs.LG,33,41,33_hmm_hmms_hidden markov_hidden
+2007_2014_cs.LG,34,37,34_forecast_electricity_grid_weather
+2007_2014_cs.LG,35,37,35_protein_amino acid_amino_acid
+2007_2014_cs.LG,36,36,36_gp_covariance function_gps_gaussian
+2007_2014_cs.LG,37,36,37_boost_adaboost_abc_logitboost
+2007_2014_cs.LG,38,36,38_game_player_equilibrium_nash
+2007_2014_cs.LG,39,36,39_hash_minwise_bit_minwise hash
+2007_2014_cs.LG,40,35,40_brain_eeg_bci_subject
+2007_2014_cs.LG,41,34,41_encoder_auto_auto encoder_denoising
+2007_2014_cs.LG,42,34,42_privacy_private_differential privacy_differentially
+2007_2014_cs.LG,43,33,43_bayesian optimization_acquisition function_mco_pl
+2007_2014_cs.LG,44,32,44_tensor_tensor decomposition_decomposition_cpd
+2007_2014_cs.LG,45,30,45_domain_domain adaptation_adaptation_target domain
+2007_2014_cs.LG,46,28,46_pca_principal_principal component_sparse pca
+2007_2014_cs.LG,47,28,47_multi label_label_multilabel_label classification
+2007_2014_cs.LG,48,26,48_series_association rule_association_rule
+2007_2014_cs.LG,49,26,49_mean square_rkhss_lm_impulse
+2007_2014_cs.LG,50,25,50_boltzmann_boltzmann machine_rbms_rbm
+2007_2014_cs.LG,51,25,51_inequality_concentration inequality_concentration_fast rate
+2007_2014_cs.LG,52,24,52_intrusion_detection_intrusion detection_anomaly
+2007_2014_cs.LG,53,24,53_diffusion_agent_adaptive network_mean square
+2007_2014_cs.LG,54,23,54_tweet_social medium_event_medium
+2007_2014_cs.LG,55,23,55_mcmc_dpvi_variational_metropolis
+2007_2014_cs.LG,56,22,56_worker_crowdsourcing_crowd_map rule
+2007_2014_cs.LG,57,21,57_subspace_ssc_subspace cluster_lrr

@@ -1,0 +1,12 @@
+period_category,topic,count,name
+2007_2014_cs.CL,0,444,0_sentiment_opinion_network_social
+2007_2014_cs.CL,1,91,1_semantics_logic_calculus_quantum
+2007_2014_cs.CL,2,77,2_arabic_tag_morphological_stem
+2007_2014_cs.CL,3,69,3_speech_recognition_speech recognition_asr
+2007_2014_cs.CL,4,66,4_translation_machine translation_machine_mt
+2007_2014_cs.CL,5,58,5_topic_document_summarization_summary
+2007_2014_cs.CL,6,58,6_representation_learn_vector_neural
+2007_2014_cs.CL,7,44,7_grammar_parser_syntactic_parse
+2007_2014_cs.CL,8,42,8_ontology_domain_owl_prototype
+2007_2014_cs.CL,9,26,9_measure_relatedness_semantic relatedness_semantic
+2007_2014_cs.CL,10,23,10_biomedical_protein_clinical_medical

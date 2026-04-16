@@ -1,0 +1,10 @@
+period_category,topic,count,name
+1999_2006_cs.AI,0,153,0_belief_revision_evidence_probability
+1999_2006_cs.AI,1,109,1_program_logic program_logic_semantics
+1999_2006_cs.AI,2,94,2_neural_neural network_network_fuzzy
+1999_2006_cs.AI,3,72,3_agent_action_plan_game
+1999_2006_cs.AI,4,53,4_population_genetic_fitness_evolutionary
+1999_2006_cs.AI,5,42,5_constraint_consistency_propagation_constraint propagation
+1999_2006_cs.AI,6,41,6_document_user_web_site
+1999_2006_cs.AI,7,39,7_mining_cluster_outlier_pattern
+1999_2006_cs.AI,8,27,8_random_sit_instance_formula

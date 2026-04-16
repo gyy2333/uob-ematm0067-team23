@@ -1,0 +1,156 @@
+period_category,topic,count,name
+2015_2021_cs.AI,0,530,0_cancer_segmentation_tumor_medical image
+2015_2021_cs.AI,1,529,1_drive_vehicle_traffic_driver
+2015_2021_cs.AI,2,304,2_wireless_channel_edge_communication
+2015_2021_cs.AI,3,257,3_explanation_xai_explainable_explainable ai
+2015_2021_cs.AI,4,254,4_sit_solver_csp_sat
+2015_2021_cs.AI,5,251,5_causal_causal inference_causal effect_observational
+2015_2021_cs.AI,6,249,6_patient_clinical_health_medical
+2015_2021_cs.AI,7,248,7_demonstration_locomotion_manipulation_robot
+2015_2021_cs.AI,8,241,8_ontology_web_owl_semantic web
+2015_2021_cs.AI,9,233,9_mapf_path_rrt_cbs
+2015_2021_cs.AI,10,226,10_item_recommendation_recommender_user item
+2015_2021_cs.AI,11,226,11_point cloud_cloud_point_shape
+2015_2021_cs.AI,12,210,12_mdps_markov decision_pomdp_pomdps
+2015_2021_cs.AI,13,203,13_speech_speaker_acoustic_asr
+2015_2021_cs.AI,14,183,14_dialogue_conversational_conversation_dialog
+2015_2021_cs.AI,15,182,15_action recognition_video_human action_skeleton
+2015_2021_cs.AI,16,179,16_kg_knowledge graph_entity_link prediction
+2015_2021_cs.AI,17,178,17_evolutionary_ea_optimization_mutation
+2015_2021_cs.AI,18,173,18_reward_reward function_rl_skill
+2015_2021_cs.AI,19,162,19_node_network embed_graph_node classification
+2015_2021_cs.AI,20,153,20_asp_answer program_logic program_program
+2015_2021_cs.AI,21,152,21_adversarial_attack_perturbation_adversarial example
+2015_2021_cs.AI,22,150,22_student_educational_knowledge trace_education
+2015_2021_cs.AI,23,148,23_argumentation_argument_semantics_dung
+2015_2021_cs.AI,24,148,24_plan_planning_planner_goal recognition
+2015_2021_cs.AI,25,148,25_energy_electricity_power_grid
+2015_2021_cs.AI,26,138,26_navigation_vln_navigate_instruction
+2015_2021_cs.AI,27,138,27_grasp_tactile_manipulation_finger
+2015_2021_cs.AI,28,124,28_style_painting_paint_artistic
+2015_2021_cs.AI,29,124,29_gan_gans_image translation_generative
+2015_2021_cs.AI,30,122,30_fairness_discrimination_bias_fair
+2015_2021_cs.AI,31,120,31_intrusion_intrusion detection_cyber_threat
+2015_2021_cs.AI,32,120,32_pcg_procedural_game_content generation
+2015_2021_cs.AI,33,120,33_code_bug_source code_software
+2015_2021_cs.AI,34,119,34_multi agent_marl_agent reinforcement_cooperative
+2015_2021_cs.AI,35,119,35_controller_safety_control_safe
+2015_2021_cs.AI,36,118,36_theorem_proof_theorem prove_prover
+2015_2021_cs.AI,37,115,37_ethic_ai ethic_ethical_ai
+2015_2021_cs.AI,38,113,38_document_citation_retrieval_topic
+2015_2021_cs.AI,39,112,39_quantum_quantum computer_quantum compute_quantum circuit
+2015_2021_cs.AI,40,109,40_music_musical_melody_chord
+2015_2021_cs.AI,41,108,41_covid_pandemic_covid pandemic_vaccine
+2015_2021_cs.AI,42,107,42_bayesian network_graphical_bp_belief propagation
+2015_2021_cs.AI,43,104,43_symbolic_neural symbolic_logical_neuro symbolic
+2015_2021_cs.AI,44,103,44_privacy_federate_fl_federate learn
+2015_2021_cs.AI,45,100,45_query answer_tgds_query_datalog
+2015_2021_cs.AI,46,99,46_game_card_chess_board
+2015_2021_cs.AI,47,98,47_intelligence_agi_human intelligence_artificial intelligence
+2015_2021_cs.AI,48,97,48_vqa_visual question_question_answer vqa
+2015_2021_cs.AI,49,93,49_satellite_plant_satellite image_crop
+2015_2021_cs.AI,50,92,50_caption_image caption_generate caption_sentence
+2015_2021_cs.AI,51,92,51_activation function_convolution_activation_convolutional
+2015_2021_cs.AI,52,91,52_event log_log_conformance_business
+2015_2021_cs.AI,53,91,53_molecule_protein_chemical_molecular
+2015_2021_cs.AI,54,89,54_commonsense_commonsense knowledge_qa_answer
+2015_2021_cs.AI,55,88,55_spike_snns_neuromorphic_snn
+2015_2021_cs.AI,56,86,56_fake news_news_rumor_fake
+2015_2021_cs.AI,57,86,57_prune_quantization_compression_network prune
+2015_2021_cs.AI,58,85,58_revision_belief_belief change_agm
+2015_2021_cs.AI,59,84,59_ride_bike_trip_passenger
+2015_2021_cs.AI,60,83,60_vehicle rout_rout_vrp_delivery
+2015_2021_cs.AI,61,83,61_voter_vote_voting_voting rule
+2015_2021_cs.AI,62,82,62_attribution_interpretability_saliency_explanation
+2015_2021_cs.AI,63,79,63_dempster_shafer_belief function_dempster shafer
+2015_2021_cs.AI,64,79,64_gpu_parallelism_workload_hpc
+2015_2021_cs.AI,65,78,65_domain adaptation_uda_adaptation_target domain
+2015_2021_cs.AI,66,78,66_face_face recognition_facial_makeup
+2015_2021_cs.AI,67,75,67_cfr_regret_equilibrium_form game
+2015_2021_cs.AI,68,72,68_trading_stock_market_portfolio
+2015_2021_cs.AI,69,69,69_traffic_urban_city_traffic flow
+2015_2021_cs.AI,70,68,70_transformer_vision transformer_vit_self attention
+2015_2021_cs.AI,71,68,71_mining_pattern mining_pattern_itemset
+2015_2021_cs.AI,72,67,72_eeg_bci_eeg signal_sleep
+2015_2021_cs.AI,73,63,73_epistemic_epistemic logic_epistemic planning_del
+2015_2021_cs.AI,74,63,74_character_document_document image_handwritten
+2015_2021_cs.AI,75,63,75_quantum_quantum like_order effect_cognition
+2015_2021_cs.AI,76,62,76_deepfake_deepfakes_face_spoof
+2015_2021_cs.AI,77,62,77_defender_attacker_security_adversary
+2015_2021_cs.AI,78,61,78_malware_android_malware detection_android malware
+2015_2021_cs.AI,79,61,79_submodular_submodular function_convex_approximation ratio
+2015_2021_cs.AI,80,60,80_instruction_visual intelligence_spcoa_spatial
+2015_2021_cs.AI,81,59,81_sensorimotor_body_affordance_motor
+2015_2021_cs.AI,82,58,82_tsp_ttp_salesman_travel salesman
+2015_2021_cs.AI,83,57,83_seismic_equation_rock_pdes
+2015_2021_cs.AI,84,56,84_cluster_clustering_eca_biclustering
+2015_2021_cs.AI,85,54,85_lstm_rnns_rnn_recurrent
+2015_2021_cs.AI,86,53,86_accelerator_fpga_hardware_chip
+2015_2021_cs.AI,87,52,87_schedule_job_shop_shop schedule
+2015_2021_cs.AI,88,51,88_video_video question_story_videoqa
+2015_2021_cs.AI,89,51,89_explanation_generate explanation_explanation generation_plan
+2015_2021_cs.AI,90,50,90_envy_allocation_envy freeness_freeness
+2015_2021_cs.AI,91,50,91_id_person_reid_person identification
+2015_2021_cs.AI,92,49,92_slam_localization_map slam_grid map
+2015_2021_cs.AI,93,49,93_pose_human pose_pose estimation_body
+2015_2021_cs.AI,94,48,94_pairwise comparison_mcda_criterion_multiple criterion
+2015_2021_cs.AI,95,48,95_explicable_robot_tom_human robot
+2015_2021_cs.AI,96,47,96_blockchain_fraud_smart contract_transaction
+2015_2021_cs.AI,97,46,97_consciousness_conscious_distinction graph_iit
+2015_2021_cs.AI,98,46,98_social dilemma_dilemma_cooperation_prisoner dilemma
+2015_2021_cs.AI,99,45,99_football_player_sport_soccer
+2015_2021_cs.AI,100,44,100_object detection_bound box_anchor_iou
+2015_2021_cs.AI,101,43,101_bandit_arm_regret_contextual bandit
+2015_2021_cs.AI,102,42,102_semantic segmentation_segmentation_semantic_pixel
+2015_2021_cs.AI,103,42,103_program synthesis_program_zoea_output example
+2015_2021_cs.AI,104,42,104_agent base_abm_innovation diffusion_em
+2015_2021_cs.AI,105,41,105_anomaly_anomaly detection_outlier_outlier detection
+2015_2021_cs.AI,106,41,106_continual_forget_catastrophic_catastrophic forget
+2015_2021_cs.AI,107,40,107_conceptual space_conceptual_lattice_geometric way
+2015_2021_cs.AI,108,40,108_variational_posterior_dgps_variational inference
+2015_2021_cs.AI,109,40,109_subspace_tsne_dimensionality reduction_subspace cluster
+2015_2021_cs.AI,110,40,110_emotion_emotion recognition_visual emotion_arousal
+2015_2021_cs.AI,111,39,111_estimator_kl_divergence_hoeffding
+2015_2021_cs.AI,112,39,112_ml_software_se_software engineering
+2015_2021_cs.AI,113,39,113_visual reasoning_visual_bongard_reasoning
+2015_2021_cs.AI,114,38,114_rationality_bound rationality_rational_fdt
+2015_2021_cs.AI,115,38,115_neuron_cortical_backpropagation_synaptic
+2015_2021_cs.AI,116,38,116_ilp_inductive logic_ilasp_hypothesis
+2015_2021_cs.AI,117,37,117_rough_attribute reduction_upper approximation_rough base
+2015_2021_cs.AI,118,37,118_galaxy_solar_black hole_merger
+2015_2021_cs.AI,119,37,119_track_tracker_object track_mot
+2015_2021_cs.AI,120,37,120_worker_crowdsourcing_crowd_crowdsourcing platform
+2015_2021_cs.AI,121,37,121_moral_ethical_va_value alignment
+2015_2021_cs.AI,122,33,122_physical_intuitive physic_physic_physical interaction
+2015_2021_cs.AI,123,31,123_bayesian optimization_bo_acquisition function_knowledge gradient
+2015_2021_cs.AI,124,30,124_mcts_tree search_search mcts_carlo tree
+2015_2021_cs.AI,125,29,125_super resolution_super_resolution_vsr
+2015_2021_cs.AI,126,29,126_ecg_respiratory_cough_sound
+2015_2021_cs.AI,127,29,127_gp_tgp_genetic programming_tpot
+2015_2021_cs.AI,128,29,128_zsl_zero shot_unseen class_shot learn
+2015_2021_cs.AI,129,28,129_influence maximization_maximization_influence_influencers
+2015_2021_cs.AI,130,27,130_evacuation_emergency_emergency response_earthquake
+2015_2021_cs.AI,131,27,131_backdoor_backdoor attack_trigger_attack
+2015_2021_cs.AI,132,27,132_ai safety_asi_agi_safety
+2015_2021_cs.AI,133,27,133_lift_domain size_domain recursion_probabilistic logic
+2015_2021_cs.AI,134,26,134_distillation_teacher_kd_knowledge distillation
+2015_2021_cs.AI,135,26,135_filler_sensory_semantic memory_intelligence test
+2015_2021_cs.AI,136,26,136_verification_verification neural_onnx_security property
+2015_2021_cs.AI,137,25,137_cardest_dbms_query_index
+2015_2021_cs.AI,138,25,138_shot_shot learn_firth_meta
+2015_2021_cs.AI,139,24,139_age_gender_age estimation_gender classification
+2015_2021_cs.AI,140,24,140_anomaly_anomaly detection_novelty detection_mvtec
+2015_2021_cs.AI,141,24,141_neuroevolution_neat_ke_structural objective
+2015_2021_cs.AI,142,23,142_sufficient reason_decision tree_decision list_oa
+2015_2021_cs.AI,143,23,143_speech emotion_emotion_emotion recognition_ser
+2015_2021_cs.AI,144,23,144_bts_behavior tree_tree bts_bt
+2015_2021_cs.AI,145,23,145_explainable recommendation_recommendation_conversational recommendation_recommendation explanation
+2015_2021_cs.AI,146,22,146_expression_expression recognition_facial_facial expression
+2015_2021_cs.AI,147,22,147_negotiation_negotiation team_negotiate_opponent
+2015_2021_cs.AI,148,21,148_interval value_interval_fuzzy_fuzzy number
+2015_2021_cs.AI,149,21,149_probabilistic program_probabilistic programming_probabilistic_spreadsheet
+2015_2021_cs.AI,150,21,150_dcops_dcop_distribute constraint_constraint optimization
+2015_2021_cs.AI,151,21,151_starcraft_rts_rts game_starcraft ii
+2015_2021_cs.AI,152,21,152_mcmc_smci_sampler_markov chain
+2015_2021_cs.AI,153,21,153_cp net_conditional preference_cp_preference
+2015_2021_cs.AI,154,21,154_artificial life_cellular automaton_alife_cellular

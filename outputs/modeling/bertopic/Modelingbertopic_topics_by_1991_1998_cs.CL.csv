@@ -1,0 +1,11 @@
+period_category,topic,count,name
+1991_1998_cs.CL,0,207,0_grammar_formalism_unification_semantics
+1991_1998_cs.CL,1,76,1_sense_disambiguation_sense disambiguation_noun
+1991_1998_cs.CL,2,65,2_dialogue_agent_plan_belief
+1991_1998_cs.CL,3,59,3_translation_machine translation_mt_english
+1991_1998_cs.CL,4,58,4_tagger_tag_statistical_entropy
+1991_1998_cs.CL,5,54,5_parser_parse_sentence_grammar
+1991_1998_cs.CL,6,39,6_center_sc_zero_refer
+1991_1998_cs.CL,7,33,7_nlg_gate_technology_nlp
+1991_1998_cs.CL,8,30,8_turkish_morphology_level_order
+1991_1998_cs.CL,9,29,9_network_phonetic_sequence_phonological

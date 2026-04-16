@@ -1,0 +1,50 @@
+Period,Category,Topic_ID,Intensity_in_Slice,Contextual_Keywords,Name,Count,Total
+1991_1998,cs.CL,1,0.22354211663066956,"grammar,formalism,unification,semantics,constraint,parse,hpsg,tree,logic,dependency",0_grammar_formalism_unification_semantics,207,926
+1991_1998,cs.CL,2,0.08207343412526998,"sense,disambiguation,sensedisambiguation,noun,document,retrieval,corpus,lexical,large,automatic",1_sense_disambiguation_sense disambiguation_noun,76,926
+1991_1998,cs.CL,3,0.07019438444924406,"dialogue,agent,plan,belief,act,dialogueact,initiative,dialog,utterance,speak",2_dialogue_agent_plan_belief,65,926
+1991_1998,cs.CL,4,0.06371490280777538,"translation,machinetranslation,mt,english,machine,japanese,bilingual,parallel,translate,japaneseenglish",3_translation_machine translation_mt_english,59,926
+1991_1998,cs.CL,5,0.06263498920086392,"tagger,tag,statistical,entropy,speech,maximum,maximumentropy,bigram,corpus,rulebase",4_tagger_tag_statistical_entropy,58,926
+1999_2006,cs.AI,1,0.17545871559633028,"belief,revision,evidence,probability,conditional,default,dempster,rule,reason,beliefrevision",0_belief_revision_evidence_probability,153,872
+1999_2006,cs.AI,2,0.125,"program,logicprogram,logic,semantics,answer,stable,disjunctive,stablesemantics,negation,answerprogram",1_program_logic program_logic_semantics,109,872
+1999_2006,cs.AI,3,0.10779816513761468,"neural,neuralnetwork,network,fuzzy,learn,brain,memory,artificial,artificialneural,machine",2_neural_neural network_network_fuzzy,94,872
+1999_2006,cs.AI,4,0.08256880733944955,"agent,action,plan,game,base,environment,planning,reinforcement,reinforcementlearn,robot",3_agent_action_plan_game,72,872
+1999_2006,cs.AI,5,0.06077981651376147,"population,genetic,fitness,evolutionary,optimization,image,ant,selection,astrobiologist,field",4_population_genetic_fitness_evolutionary,53,872
+1999_2006,cs.CL,1,0.229957805907173,"grammar,parse,rule,parser,constraint,free,base,corpus,learn,machine",0_grammar_parse_rule_parser,109,474
+1999_2006,cs.CL,2,0.12658227848101267,"speech,dialogue,representation,nlg,prosodic,perplexity,trigram,technique,generation,script",1_speech_dialogue_representation_nlg,60,474
+1999_2006,cs.CL,3,0.1160337552742616,"document,retrieval,query,translation,similarity,term,collection,topic,thesaurus,cluster",2_document_retrieval_query_translation,55,474
+1999_2006,cs.CL,4,0.06329113924050633,"network,law,zipf,neuralnetwork,neural,tip,tongue,tiptongue,subcognitive,subcognitivequestion",3_network_law_zipf_neural network,30,474
+1999_2006,cs.CL,5,0.04852320675105485,"annotation,format,linguistic,annotationgraph,tool,graph,resource,linguisticannotation,open,metadata",4_annotation_format_linguistic_annotation graph,23,474
+1999_2006,cs.LG,1,0.30451127819548873,"prediction,class,probability,sequence,distribution,universal,bound,convergence,random,stochastic",0_prediction_class_probability_sequence,81,266
+1999_2006,cs.LG,2,0.15037593984962405,"keyphrases,semantic,sentence,corpus,web,document,pair,phrase,noun,learn",1_keyphrases_semantic_sentence_corpus,40,266
+1999_2006,cs.LG,3,0.12406015037593984,"agent,policy,game,action,learn,coin,reinforcement,reward,play,maxq",2_agent_policy_game_action,33,266
+1999_2006,cs.LG,4,0.12406015037593984,"classifier,classification,tree,error,attribute,validation,bayes,crossvalidation,decisiontree,decision",3_classifier_classification_tree_error,33,266
+2007_2014,cs.AI,1,0.06776918928635628,"image,brain,intelligence,recognition,human,neuron,cognitive,face,neural,object",0_image_brain_intelligence_recognition,377,5563
+2007_2014,cs.AI,2,0.06507280244472408,"constraint,sit,solver,sat,symmetry,clause,constraintsatisfaction,consistency,instance,csp",1_constraint_sit_solver_sat,362,5563
+2007_2014,cs.AI,3,0.04727664928995146,"ontology,web,semantic,semanticweb,owl,rdf,service,query,descriptionlogic,description",2_ontology_web_semantic_semantic web,263,5563
+2007_2014,cs.AI,4,0.04583857630774762,"bayesiannetwork,network,beliefnetwork,bayesian,cutset,belief,bn,inference,exact,sample",3_bayesian network_network_belief network_bayesian,255,5563
+2007_2014,cs.AI,5,0.0291209778896279,"policy,mdps,markovdecision,pomdps,iteration,valuefunction,valueiteration,markov,mdp,pomdp",4_policy_mdps_markov decision_pomdps,162,5563
+2007_2014,cs.CL,1,0.3089770354906054,"sentiment,opinion,network,social,law,twitter,frequency,review,distribution,length",0_sentiment_opinion_network_social,444,1437
+2007_2014,cs.CL,2,0.06332637439109255,"semantics,logic,calculus,quantum,compositional,lambek,meaning,distributional,vector,logical",1_semantics_logic_calculus_quantum,91,1437
+2007_2014,cs.CL,3,0.05358385525400139,"arabic,tag,morphological,stem,sindhi,functiontag,myanmar,character,rule,stemmer",2_arabic_tag_morphological_stem,77,1437
+2007_2014,cs.CL,4,0.04801670146137787,"speech,recognition,speechrecognition,asr,automaticspeech,speaker,mfcc,acoustic,noise,rate",3_speech_recognition_speech recognition_asr,69,1437
+2007_2014,cs.CL,5,0.04592901878914405,"translation,machinetranslation,machine,mt,transliteration,parallel,english,metric,bilingual,statisticalmachine",4_translation_machine translation_machine_mt,66,1437
+2007_2014,cs.LG,1,0.037528868360277134,"policy,reinforcement,reinforcementlearn,valuefunction,environment,mdp,markovdecision,action,rl,agent",0_policy_reinforcement_reinforcement learn_value function,195,5196
+2007_2014,cs.LG,2,0.032909930715935336,"cluster,clustering,mean,spectralcluster,clusteralgorithms,meancluster,spectral,center,partition,point",1_cluster_clustering_mean_spectral cluster,171,5196
+2007_2014,cs.LG,3,0.027136258660508082,"gradient,convergence,stochastic,convergencerate,descent,sgd,stochasticgradient,coordinate,stronglyconvex,optimization",2_gradient_convergence_stochastic_convergence rate,141,5196
+2007_2014,cs.LG,4,0.023479599692070825,"link,graph,node,network,community,relational,social,linkprediction,membership,socialnetwork",3_link_graph_node_network,122,5196
+2007_2014,cs.LG,5,0.023094688221709007,"convolutional,convolutionalneural,image,object,video,visual,convolutionalnetwork,cnn,recognition,layer",4_convolutional_convolutional neural_image_object,120,5196
+2015_2021,cs.AI,1,0.0239094148960166,"cancer,segmentation,tumor,medicalimage,mri,medical,ct,lesion,ray,surgical",0_cancer_segmentation_tumor_medical image,530,22167
+2015_2021,cs.AI,2,0.023864302792439212,"drive,vehicle,traffic,driver,autonomousvehicle,autonomous,autonomousdrive,av,road,driving",1_drive_vehicle_traffic_driver,529,22167
+2015_2021,cs.AI,3,0.013714079487526504,"wireless,channel,edge,communication,radio,iot,device,uav,basestation,packet",2_wireless_channel_edge_communication,304,22167
+2015_2021,cs.AI,4,0.011593810619389182,"explanation,xai,explainable,explainableai,explainability,blackbox,black,counterfactualexplanation,explainableartificial,counterfactual",3_explanation_xai_explainable_explainable ai,257,22167
+2015_2021,cs.AI,5,0.011458474308657013,"sit,solver,csp,sat,constraint,boolean,clause,sitsolver,maxsat,constraintsatisfaction",4_sit_solver_csp_sat,254,22167
+2015_2021,cs.CL,1,0.016666666666666666,"summarization,summary,abstractive,documentsummarization,extractive,abstractivesummarization,rouge,multidocument,generatesummary,extractivesummarization",0_summarization_summary_abstractive_document summarization,446,26760
+2015_2021,cs.CL,2,0.013079222720478326,"ner,recognitionner,entityrecognition,entity,ne,nested,nest,crf,recognition,gazetteer",1_ner_recognition ner_entity recognition_entity,350,26760
+2015_2021,cs.CL,3,0.012481315396113602,"ctc,transducer,speechrecognition,wer,stream,librispeech,aed,rnn,latency,errorrate",2_ctc_transducer_speech recognition_wer,334,26760
+2015_2021,cs.CL,4,0.010762331838565023,"covid,pandemic,covidpandemic,misinformation,vaccine,coronavirus,tweet,virus,spread,outbreak",3_covid_pandemic_covid pandemic_misinformation,288,26760
+2015_2021,cs.CL,5,0.010687593423019432,"relationextraction,relation,distantsupervision,extraction,entitypair,distant,relationclassification,relationentity,superviserelation,levelrelation",4_relation extraction_relation_distant supervision_extraction,286,26760
+2015_2021,cs.LG,1,0.019697252849934593,"adversarialexample,defense,perturbation,adversarialattack,adversarialtraining,adversarial,attack,adversarialperturbation,adversarialrobustness,boxattack",0_adversarial example_defense_perturbation_adversarial attack,1581,80265
+2015_2021,cs.LG,2,0.010739425652526008,"arm,bandit,armbandit,multiarm,regret,contextualbandit,thompson,thompsonsample,ucb,bestarm",1_arm_bandit_arm bandit_multi arm,862,80265
+2015_2021,cs.LG,3,0.009368965302435682,"causal,treatment,treatmenteffect,causaleffect,causalinference,observational,causaldiscovery,confounders,dag,confound",2_causal_treatment_treatment effect_causal effect,752,80265
+2015_2021,cs.LG,4,0.009182084345605183,"pointcloud,lidar,cloud,shape,mesh,monocular,scene,depth,kitti,depthestimation",3_point cloud_lidar_cloud_shape,737,80265
+2015_2021,cs.LG,5,0.00897028592786395,"item,recommendation,useritem,recommender,collaborativefiltering,rating,userpreference,collaborative,session,baserecommendation",4_item_recommendation_user item_recommender,720,80265

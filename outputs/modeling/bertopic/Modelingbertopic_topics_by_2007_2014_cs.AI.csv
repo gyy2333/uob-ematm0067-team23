@@ -1,0 +1,48 @@
+period_category,topic,count,name
+2007_2014_cs.AI,0,377,0_image_brain_intelligence_recognition
+2007_2014_cs.AI,1,362,1_constraint_sit_solver_sat
+2007_2014_cs.AI,2,263,2_ontology_web_semantic_semantic web
+2007_2014_cs.AI,3,255,3_bayesian network_network_belief network_bayesian
+2007_2014_cs.AI,4,162,4_policy_mdps_markov decision_pomdps
+2007_2014_cs.AI,5,154,5_causal_pearl_independence_variable
+2007_2014_cs.AI,6,105,6_probability_belief_plausibility_possibility
+2007_2014_cs.AI,7,103,7_immune_attack_detection_intrusion
+2007_2014_cs.AI,8,92,8_dempster_belief function_dempster shafer_shafer
+2007_2014_cs.AI,9,87,9_landscape_schedule_local search_local optimum
+2007_2014_cs.AI,10,84,10_planner_plan_planning_heuristic
+2007_2014_cs.AI,11,82,11_outlier_dimensional_classifier_dimensional space
+2007_2014_cs.AI,12,80,12_bp_belief propagation_message pass_relaxation
+2007_2014_cs.AI,13,77,13_lift_lift inference_probabilistic_inference
+2007_2014_cs.AI,14,76,14_fuzzy_neutrosophic_soft_grey
+2007_2014_cs.AI,15,73,15_game_player_play_chess
+2007_2014_cs.AI,16,66,16_program_atom_logic program_stable
+2007_2014_cs.AI,17,63,17_temporal_rcc_calculus_action
+2007_2014_cs.AI,18,53,18_influence diagram_diagram_influence_decision
+2007_2014_cs.AI,19,53,19_market_auction_price_prediction market
+2007_2014_cs.AI,20,51,20_asp_answer program_program asp_answer
+2007_2014_cs.AI,21,50,21_protein_sequence_gene_hidden markov
+2007_2014_cs.AI,22,50,22_rough_matroids_cover_matroid
+2007_2014_cs.AI,23,48,23_patient_clinical_treatment_diagnostic
+2007_2014_cs.AI,24,47,24_vote_voting_manipulation_election
+2007_2014_cs.AI,25,47,25_argumentation_argument_dung_afs
+2007_2014_cs.AI,26,46,26_evolutionary_population_genetic_mutation
+2007_2014_cs.AI,27,37,27_game_nash equilibrium_equilibrium_nash
+2007_2014_cs.AI,28,36,28_proof_mizar_prover_atp
+2007_2014_cs.AI,29,36,29_fault_diagnosis_repair_diagnostic
+2007_2014_cs.AI,30,36,30_frequent_pattern_mining_sequential pattern
+2007_2014_cs.AI,31,35,31_plan_action_plan recognition_action abstraction
+2007_2014_cs.AI,32,34,32_reinforcement learn_reinforcement_exploration_learn
+2007_2014_cs.AI,33,34,33_forecast_nn_mlp_bushing
+2007_2014_cs.AI,34,34,34_preference_utility_elicitation_utility function
+2007_2014_cs.AI,35,33,35_quantum_interference_entanglement_entangle
+2007_2014_cs.AI,36,33,36_rout_protocol_short path_wireless
+2007_2014_cs.AI,37,31,37_social_social network_community_node
+2007_2014_cs.AI,38,31,38_abc_swarm_pso_particle
+2007_2014_cs.AI,39,30,39_item_rating_recommender_recommendation
+2007_2014_cs.AI,40,30,40_path_collision_rrt_path planning
+2007_2014_cs.AI,41,29,41_intelligence hold_conference uncertainty_proceeding_uncertainty artificial
+2007_2014_cs.AI,42,29,42_document_document cluster_cluster_blog
+2007_2014_cs.AI,43,28,43_expect utility_utility_bookie_uncertainty
+2007_2014_cs.AI,44,22,44_traffic_road_vehicle_road network
+2007_2014_cs.AI,45,22,45_emergency_crisis_crisis response_response
+2007_2014_cs.AI,46,20,46_story_narrative_shadow_xapagy

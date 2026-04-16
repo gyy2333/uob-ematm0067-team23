@@ -1,0 +1,221 @@
+period_category,topic,count,name
+2015_2021_cs.CL,0,446,0_summarization_summary_abstractive_document summarization
+2015_2021_cs.CL,1,350,1_ner_recognition ner_entity recognition_entity
+2015_2021_cs.CL,2,334,2_ctc_transducer_speech recognition_wer
+2015_2021_cs.CL,3,288,3_covid_pandemic_covid pandemic_misinformation
+2015_2021_cs.CL,4,286,4_relation extraction_relation_distant supervision_extraction
+2015_2021_cs.CL,5,246,5_vector_vec_skip gram_embed
+2015_2021_cs.CL,6,238,6_mrc_read comprehension_comprehension_machine read
+2015_2021_cs.CL,7,207,7_aspect_absa_aspect base_base sentiment
+2015_2021_cs.CL,8,207,8_topic_lda_dirichlet_dirichlet allocation
+2015_2021_cs.CL,9,198,9_wav vec_wav_speech representation_acoustic
+2015_2021_cs.CL,10,197,10_label classification_multi label_document classification_classification
+2015_2021_cs.CL,11,191,11_tt_tacotron_vc_prosody
+2015_2021_cs.CL,12,179,12_depression_mental_mental health_health
+2015_2021_cs.CL,13,178,13_cross lingual_lingual_mbert_lingual transfer
+2015_2021_cs.CL,14,177,14_qa_answer selection_answer_question answer
+2015_2021_cs.CL,15,172,15_bias_gender_gender bias_debiasing
+2015_2021_cs.CL,16,170,16_sentiment_polarity_opinion_lexicon
+2015_2021_cs.CL,17,169,17_clinical_patient_note_ehr
+2015_2021_cs.CL,18,156,18_neural generation_generation_control_control generation
+2015_2021_cs.CL,19,155,19_law_zipf_zipf law_phylogenetic
+2015_2021_cs.CL,20,152,20_morphological_inflection_morphology_lemma
+2015_2021_cs.CL,21,152,21_rnns_rnn_recurrent_lstm
+2015_2021_cs.CL,22,151,22_response_response selection_response generation_multi turn
+2015_2021_cs.CL,23,147,23_fake news_fake_news_news detection
+2015_2021_cs.CL,24,147,24_speech translation_st_simultaneous_subtitle
+2015_2021_cs.CL,25,144,25_explanation_rationale_faithful_faithfulness
+2015_2021_cs.CL,26,144,26_commonsense_commonsense reason_commonsense knowledge_reason
+2015_2021_cs.CL,27,143,27_citation_scientific_publication_cite
+2015_2021_cs.CL,28,142,28_hate_hate speech_speech detection_hateful
+2015_2021_cs.CL,29,142,29_caption_image caption_image_generate caption
+2015_2021_cs.CL,30,142,30_code_source code_program_software
+2015_2021_cs.CL,31,141,31_vqa_visual question_answer vqa_visual
+2015_2021_cs.CL,32,139,32_modal_vision_vl_image
+2015_2021_cs.CL,33,136,33_political_ideology_polarization_parliament
+2015_2021_cs.CL,34,130,34_review_customer_product_rating
+2015_2021_cs.CL,35,128,35_wsd_sense_sense disambiguation_disambiguation
+2015_2021_cs.CL,36,125,36_semantic parser_semantic parsing_parsing_logical form
+2015_2021_cs.CL,37,125,37_video_video caption_caption_videos
+2015_2021_cs.CL,38,121,38_emotion_intensity_affective_emotion classification
+2015_2021_cs.CL,39,120,39_mlm_tl_pretraining_transfer learn
+2015_2021_cs.CL,40,120,40_argument_argumentation_argumentative_argument mining
+2015_2021_cs.CL,41,120,41_legal_court_legal domain_contract
+2015_2021_cs.CL,42,118,42_attack_adversarial_adversarial example_adversarial attack
+2015_2021_cs.CL,43,116,43_claim_fact check_check_fact
+2015_2021_cs.CL,44,115,44_separation_speech separation_overlap speech_speech enhancement
+2015_2021_cs.CL,45,111,45_bilingual lexicon_bilingual_lexicon induction_bli
+2015_2021_cs.CL,46,110,46_coreference_coreference resolution_resolution_event coreference
+2015_2021_cs.CL,47,110,47_query document_ir_trec_retrieval
+2015_2021_cs.CL,48,109,48_instruction_navigation_robot_vln
+2015_2021_cs.CL,49,109,49_shot translation_unmt_multilingual nmt_multilingual neural
+2015_2021_cs.CL,50,109,50_transition base_parser_transition_parse
+2015_2021_cs.CL,51,107,51_entity link_el_link_mention
+2015_2021_cs.CL,52,107,52_chinese segmentation_cws_segmentation_chinese
+2015_2021_cs.CL,53,105,53_style transfer_style_transfer_formality
+2015_2021_cs.CL,54,105,54_alexa prize_prize_socialbot_alexa
+2015_2021_cs.CL,55,102,55_prune_compression_compress_quantization
+2015_2021_cs.CL,56,101,56_link prediction_knowledge graph_kg_graph completion
+2015_2021_cs.CL,57,101,57_dst_slot_dialogue track_slot value
+2015_2021_cs.CL,58,101,58_financial_stock_price_market
+2015_2021_cs.CL,59,100,59_sql_sql query_spider_database
+2015_2021_cs.CL,60,95,60_gec_grammatical error_error correction_correction gec
+2015_2021_cs.CL,61,95,61_rst_implicit relation_connective_pdtb
+2015_2021_cs.CL,62,91,62_retriever_domain question_open domain_domain qa
+2015_2021_cs.CL,63,88,63_kbqa_answer knowledge_kb_complex question
+2015_2021_cs.CL,64,88,64_subject verb_agreement_verb agreement_verb
+2015_2021_cs.CL,65,87,65_sentence representation_sts_textual similarity_sentence embed
+2015_2021_cs.CL,66,86,66_qg_question generation_generate question_generation qg
+2015_2021_cs.CL,67,85,67_calculus_automaton_proof_lambek
+2015_2021_cs.CL,68,84,68_paraphrase_paraphrase generation_generate paraphrase_paraphrase pair
+2015_2021_cs.CL,69,84,69_biomedical_bioner_biomedical nlp_jnlpba
+2015_2021_cs.CL,70,82,70_event extraction_event_event argument_trigger
+2015_2021_cs.CL,71,81,71_keyphrase_keyphrases_keyphrase extraction_keyphrase generation
+2015_2021_cs.CL,72,81,72_game_agent_emergent_communication
+2015_2021_cs.CL,73,81,73_code switch_switch_code mixed_mixed
+2015_2021_cs.CL,74,80,74_head_attention head_multi head_head attention
+2015_2021_cs.CL,75,80,75_semantic change_change detection_change_diachronic
+2015_2021_cs.CL,76,79,76_indian_smt_pidgin_rbmt
+2015_2021_cs.CL,77,78,77_sarcasm_sarcasm detection_sarcastic_irony
+2015_2021_cs.CL,78,77,78_brain_eye_eeg_eye track
+2015_2021_cs.CL,79,77,79_slu_understand slu_speak understand_intent
+2015_2021_cs.CL,80,76,80_bioasq_medical_medical dialogue_doctor
+2015_2021_cs.CL,81,74,81_hour_speech corpus_phone_asr
+2015_2021_cs.CL,82,73,82_simulator_policy_user simulator_dialogue policy
+2015_2021_cs.CL,83,73,83_intent_ood_intent detection_shot intent
+2015_2021_cs.CL,84,73,84_srl_semantic role_role label_label srl
+2015_2021_cs.CL,85,73,85_speaker recognition_speaker verification_sre_speaker
+2015_2021_cs.CL,86,73,86_entailment_nli_textual entailment_premise
+2015_2021_cs.CL,87,71,87_knowledge ground_knowledge selection_ground dialogue_unstructured knowledge
+2015_2021_cs.CL,88,69,88_kurdish_arabic_diacritic_transliteration
+2015_2021_cs.CL,89,67,89_slot_sf_intent_intent detection
+2015_2021_cs.CL,90,66,90_simplification_sentence simplification_complex sentence_simplify sentence
+2015_2021_cs.CL,91,65,91_mt_parity_mt evaluation_human parity
+2015_2021_cs.CL,92,64,92_music_lyric_song_melody
+2015_2021_cs.CL,93,63,93_nlg_metric_natural generation_exist metric
+2015_2021_cs.CL,94,62,94_act_dialog act_dialogue act_da
+2015_2021_cs.CL,95,62,95_radiology_radiology report_chest_radiologist
+2015_2021_cs.CL,96,61,96_domain adaptation_source domain_domain sentiment_target domain
+2015_2021_cs.CL,97,61,97_empathetic_empathetic response_empathy_emotional
+2015_2021_cs.CL,98,60,98_toxic_toxicity_toxicity detection_toxic comment
+2015_2021_cs.CL,99,59,99_disaster_crisis_situational awareness_disaster relate
+2015_2021_cs.CL,100,58,100_layout_document image_invoice_pdf
+2015_2021_cs.CL,101,58,101_equation_mwps_mathematical_solver
+2015_2021_cs.CL,102,57,102_document level_level nmt_level translation_aware nmt
+2015_2021_cs.CL,103,56,103_distillation_teacher_kd_knowledge distillation
+2015_2021_cs.CL,104,56,104_essay_aes_essay score_student
+2015_2021_cs.CL,105,55,105_poem_poetry_poetry generation_generate poem
+2015_2021_cs.CL,106,55,106_sequence label_crf_chunk_tag
+2015_2021_cs.CL,107,54,107_abusive_abuse_harassment_abusive behavior
+2015_2021_cs.CL,108,54,108_domain adaptation_adaptation_domain translation_domain nmt
+2015_2021_cs.CL,109,54,109_ocr_character recognition_handwritten_historical
+2015_2021_cs.CL,110,53,110_temporal relation_temporal_event temporal_event
+2015_2021_cs.CL,111,53,111_stance_stance detection_stance classification_detect stance
+2015_2021_cs.CL,112,53,112_character level_character_subword_sub character
+2015_2021_cs.CL,113,53,113_story_story generation_generate story_plot
+2015_2021_cs.CL,114,52,114_nat_autoregressive_non autoregressive_translation nat
+2015_2021_cs.CL,115,52,115_categorical compositional_compositional distributional_categorical_compositional
+2015_2021_cs.CL,116,52,116_code mixed_mixed_sentiment code_code mix
+2015_2021_cs.CL,117,51,117_readability_readability assessment_persian_assessment
+2015_2021_cs.CL,118,51,118_gans_gan_generative adversarial_discriminator
+2015_2021_cs.CL,119,51,119_emotion recognition_speech emotion_emotion_iemocap
+2015_2021_cs.CL,120,51,120_nmt_source sentence_encoder free_neural machine
+2015_2021_cs.CL,121,51,121_causal_causality_causal inference_cause effect
+2015_2021_cs.CL,122,50,122_dialogue summarization_meeting_summarization_summary
+2015_2021_cs.CL,123,50,123_amr_amr parse_smatch_amr parser
+2015_2021_cs.CL,124,50,124_augmentation_mixup_augmentation technique_augmentation nlp
+2015_2021_cs.CL,125,50,125_ultrasound_glottal_tongue_tract
+2015_2021_cs.CL,126,49,126_ad_query_search query_search engine
+2015_2021_cs.CL,127,49,127_prompt_prompt tune_prompt learn_soft prompt
+2015_2021_cs.CL,128,49,128_mmt_multimodal translation_multimodal_multimodal machine
+2015_2021_cs.CL,129,48,129_privacy_privacy policy_differential privacy_private
+2015_2021_cs.CL,130,48,130_geolocation_location_poi_geographic
+2015_2021_cs.CL,131,47,131_emoji_emojis_sticker_emoji prediction
+2015_2021_cs.CL,132,47,132_protein_ppi_biomedical_chemical
+2015_2021_cs.CL,133,46,133_humor_pun_humorous_funny
+2015_2021_cs.CL,134,45,134_kg_ke_triple_rdf triple
+2015_2021_cs.CL,135,45,135_wikipedia_entity page_editor_page
+2015_2021_cs.CL,136,44,136_sign_deaf_fingerspell_signer
+2015_2021_cs.CL,137,44,137_compositional generalization_compositional_generalization_improve compositional
+2015_2021_cs.CL,138,44,138_active_active learn_uncertainty base_uncertainty
+2015_2021_cs.CL,139,43,139_hypernymy_hypernym_taxonomy_hyponym
+2015_2021_cs.CL,140,43,140_offensive_offenseval_offensive identification_offensive detection
+2015_2021_cs.CL,141,43,141_probe_structural probe_encode linguistic_linguistic encode
+2015_2021_cs.CL,142,42,142_authorship_av_authorship attribution_authorship verification
+2015_2021_cs.CL,143,42,143_personality_trait_personality trait_mbti
+2015_2021_cs.CL,144,42,144_code switch_switch_cs_switch speech
+2015_2021_cs.CL,145,42,145_spoof_asvspoof_anonymization_attack
+2015_2021_cs.CL,146,42,146_multimodal sentiment_multimodal_modality_cmu
+2015_2021_cs.CL,147,41,147_vae_posterior collapse_variational_collapse
+2015_2021_cs.CL,148,41,148_rumor_rumour_rumor detection_veracity
+2015_2021_cs.CL,149,40,149_common ground_simmc_modal dialogue_multimodal dialogue
+2015_2021_cs.CL,150,40,150_arabic sentiment_arabic_sentiment arabic_dialect
+2015_2021_cs.CL,151,40,151_erc_emotion recognition_recognition conversation_emotion
+2015_2021_cs.CL,152,39,152_dementia_alzheimer_alzheimer disease_ad
+2015_2021_cs.CL,153,39,153_icd_icd code_cod_medical code
+2015_2021_cs.CL,154,39,154_game_base game_agent_quest
+2015_2021_cs.CL,155,39,155_smart contract_contract_ethereum_compiler
+2015_2021_cs.CL,156,38,156_coherence_coherence assessment_coherence evaluation_neural coherence
+2015_2021_cs.CL,157,38,157_metaphor_idiomatic_literal_idiom
+2015_2021_cs.CL,158,37,158_persona_persona description_personalize dialogue_persona base
+2015_2021_cs.CL,159,36,159_quantum_circuit_quantum circuit_bose
+2015_2021_cs.CL,160,36,160_propaganda_propaganda technique_propaganda detection_technique news
+2015_2021_cs.CL,161,36,161_gender_gender bias_grammatical gender_translation gender
+2015_2021_cs.CL,162,36,162_grain entity_entity mention_mention_grain
+2015_2021_cs.CL,163,35,163_keyword spot_keyword_kw_spot
+2015_2021_cs.CL,164,35,164_trial_clinical trial_pico_clinical
+2015_2021_cs.CL,165,35,165_cyber_cybersecurity_crime_security
+2015_2021_cs.CL,166,34,166_nli_inference nli_debiasing_hypothesis bias
+2015_2021_cs.CL,167,33,167_qe_quality estimation_estimation qe_estimation
+2015_2021_cs.CL,168,32,168_factual_factual consistency_factuality_factual error
+2015_2021_cs.CL,169,32,169_diarization_speaker diarization_eend_diarization error
+2015_2021_cs.CL,170,32,170_asr error_wer_asr_transcription
+2015_2021_cs.CL,171,32,171_oie_openie_open extraction_tuples
+2015_2021_cs.CL,172,32,172_treebank_treebanks_ud_lingual dependency
+2015_2021_cs.CL,173,32,173_news translation_share news_wmt share_submission wmt
+2015_2021_cs.CL,174,31,174_product_attribute value_product title_product attribute
+2015_2021_cs.CL,175,31,175_entity alignment_ea_kg_alignment
+2015_2021_cs.CL,176,30,176_synthetic parallel_synthetic_bt_iterative translation
+2015_2021_cs.CL,177,30,177_mlqa_multilingual question_qa_multilingual qa
+2015_2021_cs.CL,178,29,178_patent_patent claim_patent classification_inventor
+2015_2021_cs.CL,179,29,179_child_adult_child direct_direct speech
+2015_2021_cs.CL,180,29,180_backdoor_backdoor attack_poison_attack
+2015_2021_cs.CL,181,29,181_stack layer_wmt english_recurrently stack_transformer deep
+2015_2021_cs.CL,182,29,182_babylonian_identification_cuneiform_vardial
+2015_2021_cs.CL,183,28,183_product_commerce_answer product_product description
+2015_2021_cs.CL,184,27,184_clickbait_headline_clickbaits_clickbait detection
+2015_2021_cs.CL,185,27,185_factual knowledge_factual_lama_prompt query
+2015_2021_cs.CL,186,27,186_normalization_itn_tn_speak normalization
+2015_2021_cs.CL,187,27,187_proof_prover_proofs_puzzle
+2015_2021_cs.CL,188,26,188_beam_beam search_mbr_beam size
+2015_2021_cs.CL,189,26,189_spell_spell error_spell correction_correction
+2015_2021_cs.CL,190,26,190_visual storytelling_storytelling_vist_story
+2015_2021_cs.CL,191,25,191_compositionality_compound_noun compound_non compositional
+2015_2021_cs.CL,192,25,192_constituency_latent tree_constituency parse_branch bias
+2015_2021_cs.CL,193,25,193_conversational search_seek conversation_prf_seek
+2015_2021_cs.CL,194,25,194_localisation_ground speech_image speak_image speech
+2015_2021_cs.CL,195,24,195_mtl_multi learn_decanlp_mqan
+2015_2021_cs.CL,196,24,196_hop_multi hop_hop question_hop reason
+2015_2021_cs.CL,197,23,197_slang_urban dictionary_sociolinguistic_loanword
+2015_2021_cs.CL,198,23,198_seq_cseq_cseq seq_barthez
+2015_2021_cs.CL,199,23,199_ape_post edit_automatic post_src
+2015_2021_cs.CL,200,23,200_dialect_dialect identification_arabic dialect_province
+2015_2021_cs.CL,201,23,201_accent_accent speech_accent classification_accent identification
+2015_2021_cs.CL,202,22,202_verb_thematic fit_inferential profile_verb pattern
+2015_2021_cs.CL,203,22,203_recommendation_conversational recommendation_crs_recommender
+2015_2021_cs.CL,204,22,204_scdv_doc_wmd_paragraph vector
+2015_2021_cs.CL,205,22,205_bookcorpus_interoperability_documentation_translational nlp
+2015_2021_cs.CL,206,21,206_annotator_disagreement_linguist loop_underpowered
+2015_2021_cs.CL,207,21,207_persuasion_persuasive_persuasiveness_debate
+2015_2021_cs.CL,208,21,208_tod_orient dialogue_ubar_orient
+2015_2021_cs.CL,209,21,209_honest deception_shakespeare_wan_honest
+2015_2021_cs.CL,210,21,210_counterfactual_counterfactuals_counterevidence_counterfactual sample
+2015_2021_cs.CL,211,21,211_matching_match_match short_wd match
+2015_2021_cs.CL,212,21,212_cluster_short cluster_uft_uft strategy
+2015_2021_cs.CL,213,21,213_acronym_abbreviation_acronym disambiguation_acronyms
+2015_2021_cs.CL,214,21,214_sgnmt_smt_lrl nmt_tu et
+2015_2021_cs.CL,215,21,215_gnn_bertgcn_graph convolutional_gcn
+2015_2021_cs.CL,216,20,216_video question_video qa_video_blp
+2015_2021_cs.CL,217,20,217_visual speech_lip_viseme_lip reading
+2015_2021_cs.CL,218,20,218_clir_lingual retrieval_query translation_retrieval clir
+2015_2021_cs.CL,219,20,219_noise_homophone_robustness nmt_homophone noise

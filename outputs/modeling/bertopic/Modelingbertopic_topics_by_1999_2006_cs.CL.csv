@@ -1,0 +1,6 @@
+period_category,topic,count,name
+1999_2006_cs.CL,0,109,0_grammar_parse_rule_parser
+1999_2006_cs.CL,1,60,1_speech_dialogue_representation_nlg
+1999_2006_cs.CL,2,55,2_document_retrieval_query_translation
+1999_2006_cs.CL,3,30,3_network_law_zipf_neural network
+1999_2006_cs.CL,4,23,4_annotation_format_linguistic_annotation graph
