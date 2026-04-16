@@ -91,12 +91,12 @@ class BERT(Modeling):
         self._topics, self._probs = self._model.fit_transform(
             self._filt_clean_txt, embeddings
         )
-        n_valid = sum(1 for t in self._topics if t != -1)
-        if n_valid == 0:
-            print(
-                f"Period {period} Category {category}: all documents are outliers (Topic=-1), skipping."
-            )
-            return False
+        # n_valid = sum(1 for t in self._topics if t != -1)
+        # if n_valid == 0:
+        #     print(
+        #         f"Period {period} Category {category}: all documents are outliers (Topic=-1), skipping."
+        #     )
+        #     return False
         return True
 
     def train_global_model(
