@@ -1,0 +1,663 @@
+% EMATM0067 — Group Report
+% Task 3: Comparative Corpus Analysis
+% NeurIPS 2026 template
+
+\documentclass{article}
+
+\usepackage[final]{neurips_2026}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{multicol}
+
+% Reduce whitespace around floats globally
+\setlength{\textfloatsep}{6pt plus 2pt minus 2pt}
+\setlength{\floatsep}{4pt plus 2pt minus 2pt}
+\setlength{\intextsep}{4pt plus 2pt minus 2pt}
+\setlength{\abovecaptionskip}{4pt}
+\setlength{\belowcaptionskip}{2pt}
+
+% Fix for NeurIPS 2026 undefined \@trackname in final mode
+\makeatletter
+\providecommand{\@trackname}{}
+\makeatother
+
+\title{Comparative Corpus Analysis of Scientific Abstracts\\
+       in AI, Machine Learning and NLP}
+
+\author{
+  Ayush Bhadauria \\
+  Student ID: 2685201 \\
+  \texttt{zj25233@bristol.ac.uk}
+  \And
+  Jingting Gu \\
+  Student ID: 2793772 \\
+  \texttt{yn25187@bristol.ac.uk}
+  \And
+  Pavithraa Gangadhar \\
+  Student ID: 2757887 \\
+  \texttt{nc25293@bristol.ac.uk}
+  \AND
+  Chenyang Yan \\
+  Student ID: 2765299 \\
+  \texttt{th25186@bristol.ac.uk}
+  \And
+  Balarammahanti Siva Ganesh \\
+  Student ID: 2799846 \\
+  \texttt{en25786@bristol.ac.uk}
+  \AND
+  University of Bristol \quad EMATM0067 --- Spring 2026
+}
+
+\begin{document}
+
+\maketitle
+
+% ============================================================
+% 1. ABSTRACT
+% ============================================================
+\begin{abstract}
+This project explores the development of scientific
+research on AI, ML, and NLP through the analysis of
+a large corpus of scientific abstracts published from
+1991 to 2021. The main objective is to study how the
+focus of research, language used, and means of communication
+have changed over various eras, and how different text
+analytics approaches can influence insights obtained.
+
+In this work, we built a pipeline for text analytics
+which consists of such elements as preprocessing, temporal
+segmentation, three types of text representation (TF-IDF
+unigrams, n-gram TF-IDF, and BERT embeddings), and analytical
+approaches such as keyword analysis, LDA, BERTopic, and
+dimensionality reduction using Truncated SVD and t-SNE.
+Our dataset was divided into four time periods (1991-1998,
+1999-2006, 2007-2014, and 2015-2021) in order to find
+patterns across \texttt{cs.AI}, \texttt{cs.LG},
+and \texttt{cs.CL} subfields.
+
+The results indicate changes in language and emphasis
+over time in research, with increasing specialization and
+the appearance of sophisticated multiple-word technical
+terms in the more recent eras. TF-IDF and n-gram keywords
+proved most accurate in pinpointing paradigm shifts. BERTopic
+found that the current period is characterized by
+theme diversity rather than singular focus on a topic.
+LDA produced coherent latent themes but was affected by
+vocabulary shift. BERT embeddings arranged documents into
+themes rather than eras, indicating a valuable negative
+finding for historical research. The results emphasize the
+need for balance between interpretability and semantic
+depth in methodology, and prove that utilizing multiple
+approaches provides a fuller understanding of research evolution.
+\end{abstract}
+
+
+% ============================================================
+% 2. INTRODUCTION
+% ============================================================
+\section{Introduction}
+
+Rapid expansion within the domains of Artificial Intelligence,
+Machine Learning, and Natural Language Processing has
+resulted in drastic changes within the field of science
+communication over time. Abstracts are brief descriptions of
+scientific findings that make for an ideal resource to study
+this evolution. The analysis of abstracts from different eras
+would help identify trends in research focus, terminology,
+and methods.
+\citep{arxiv2020}.
+
+Understanding the importance of these changes is very clear for many reasons. To begin with, it helps researchers understand the changes that occur in paradigms, for example, from rules-based approaches to data-based approaches and deep learning.
+\citep{devlin-etal-2019-bert} — and gives insights into the development of the intricacies and stylistics of scientific discourse as the field progresses.
+The study analyzes an extensive number of scientific abstracts derived from the arXiv dataset found in HuggingFace.
+\citep{arxiv2020}, focusing specifically on three subject
+categories: \texttt{cs.AI} (Artificial Intelligence),
+\texttt{cs.LG} (Machine Learning), and \texttt{cs.CL}
+(Computing  Language/NLP). The dataset has metadata containing information on the
+titles, category, and publication ID, where information
+regarding time period was extracted. The corpus spans four
+time periods ranging from 1991 to 2021, providing an opportunity
+for conducting research longitudinally based on the following
+time periods: 1991-1998 (symbolic AI era), 1999-2006
+(statistical learning era), 2007-2014 (deep learning)
+
+A major challenge with the problem comes from the aspect
+that language undergoes evolution as well. There could
+be shifts in terminologies, introduction of new theories,
+and sometimes, even when talking about the same
+concept, the phrase could differ from one era to another.
+Another key issue is the imbalanced distribution
+of the data across time spans, where modern years have
+many more publications than old years.
+\citep{scikit-learn, nltk}.
+
+For instance, consider how the language used for describing qualitative observations differs.
+The abstract from the early 1990s could use terms like “expert systems,” “knowledge bases,” and “logic programming”; however, the abstract from 2015 to 2021 would refer to pre-trained transformers.
+\citep{devlin-etal-2019-bert}, attention mechanisms,
+or convolutional neural networks.
+
+To address the problems stated above,
+the process of text analysis becomes systematic and
+different techniques for analysis are examined. This time,
+however, the task is not only to find any patterns in the
+text but also realize how the selection of the technique affects
+the information acquired. The two experimental parameters include \textbf{text representation}: we compare
+TF-IDF unigrams \citep{scikit-learn}, n-gram TF-IDF
+(bigrams and trigrams), and contextual BERT embeddings
+\citep{bge2023}. The second is \textbf{topic discovery
+method}: we compare TF-IDF keyword analysis, Latent
+Dirichlet Allocation (LDA) \citep{blei2003latent}, and
+BERTopic \citep{grootendorst2022bertopic}. We additionally
+apply Truncated SVD \citep{scikit-learn} to trace the
+vocabulary trajectory of the field and t-SNE
+\citep{vandermaaten2008} to visualise how BERT embeddings
+distribute across periods.
+Section~\ref{sec:methods} describes the full pipeline.
+Section~\ref{sec:evaluation} presents results and
+evaluation. We conclude in Section~\ref{sec:conclusions}.
+
+
+% ============================================================
+% 3. METHODS
+% ============================================================
+\section{Methods}
+\label{sec:methods}
+
+\subsection{Data Preparation}
+
+The corpus was loaded from the arXiv HuggingFace dataset
+\citep{arxiv2020} and filtered to \texttt{cs.AI},
+\texttt{cs.LG}, and \texttt{cs.CL}.Excess columns were stripped away, papers with incomplete
+abstracts were omitted, and category names were made uniform.
+Next, papers were grouped into one of four epochs, as
+follows: 1991-1998, 1999-2006, 2007-2014, and 2015-2021.
+A clear class imbalance is evident in all epochs. The
+number of papers in Period 4 greatly exceeds that in other
+epochs, due to the exponential growth seen since 2012.
+To ensure fairness, keyword and topic frequencies were
+standardised rather than taken at face value.
+
+\subsection{Text Preprocessing}
+
+All abstracts were processed as follows:
+lowercase conversion, elimination of non-alphabetic
+characters and numbers, tokenization, filtering out of
+stopwords using the scikit-learn and NLTK English stopwords lists
+\citep{scikit-learn, nltk}, followed by
+lemmatization based on WordNet with POS tagging for correct
+identification of the base forms of verbs, nouns and adjectives.
+POS tags were converted to WordNet tags before
+lemmatization, which resulted in better accuracy than
+the tag-unaware strategy. A custom domain stopword list was additionally
+applied to suppress high-frequency but uninformative
+academic terms such as ``paper'', ``proposed'', and
+``results'', which would otherwise dominate TF-IDF scores
+without providing era-discriminative signal.
+
+\subsection{Analytic Axis 1: Text Representation}
+\label{subsec:representation}
+
+We compare three text representations, each offering a
+different trade-off between interpretability and semantic
+richness.
+
+\paragraph{TF-IDF Unigrams (Baseline).}
+TF-IDF weights each word by its frequency in a document
+relative to the corpus, producing a sparse vector where
+each dimension maps directly to a human-readable word.
+\textit{Hypothesis: Unigram TF-IDF will identify
+distinctive keywords per period but will miss multi-word
+methodological phrases and semantically related terms.}
+
+\paragraph{N-gram TF-IDF.}
+We extend TF-IDF to bigrams and trigrams (range 2--3)
+using \texttt{CountVectorizer} \citep{scikit-learn},
+capturing compound phrases like ``convolutional neural
+network'' that unigram analysis splits. N-gram density
+is also tracked as a proxy for the technical specificity
+of writing over time.
+\textit{Hypothesis: N-gram TF-IDF will reveal
+method-specific vocabulary shifts more clearly than
+unigrams, at the cost of a larger, sparser feature space.}
+
+\paragraph{BERT Embeddings.}
+Two pre-trained embedding models were used for different
+purposes. For semantic similarity analysis and t-SNE
+visualisation, the \texttt{all-MiniLM-L6-v2} model
+\citep{reimers-2019-sentence-bert} was used to produce
+384-dimensional embeddings, chosen for its efficiency on
+large corpora. For BERTopic topic modelling, the
+\texttt{BAAI/bge-base-en-v1.5} model \citep{bge2023}
+was used, selected for its stronger semantic capture
+on academic text. Both models compute embeddings as the
+mean-pooled final hidden layer over all tokens.
+\textit{Hypothesis: BERT embeddings will capture semantic
+similarity effectively but may be less sensitive to the
+vocabulary-level paradigm shifts that characterise era
+transitions.}
+
+\subsection{Analytic Axis 2: Topic Discovery Method}
+\label{subsec:comparison}
+
+\paragraph{TF-IDF Keyword Analysis (Baseline).}
+For each period and category we extract the top-$k$ terms
+by normalised TF-IDF score at both unigram and n-gram
+levels, to identify concepts gaining or losing prominence.
+\textit{Hypothesis: Keyword analysis will be the most
+interpretable approach but may miss latent themes spanning
+multiple vocabulary items.}
+
+\paragraph{Period Classification.}
+A Logistic Regression classifier \citep{scikit-learn} was
+trained to predict the time period label of an abstract
+from its TF-IDF representation (max 5,000 features), using
+an 80/20 train/test split with \texttt{random\_state=42}.
+If there has been much evolution in language,
+then it follows that the classifier will perform well. Confusion between adjacent periods suggests similarity in language.
+\textit{Hypothesis: Classification accuracy is expected to be higher in discriminating Period 1 from Period 4, and lower between adjacent periods.}
+
+\paragraph{Latent Dirichlet Allocation (LDA).}
+LDA \citep{blei2003latent} The model represents each document as a mixture of hidden topics, and each topic as a distribution over words.
+We use this approach on our preprocessed data set to identify the themes which reoccur in our data without using any labeling information.
+\textit{Hypothesis: LDA will complement keyword analysis by grouping co-occurring terms into coherent themes, though its bag-of-words assumption may limit sensitivity to rapidly evolving technical vocabulary.}
+
+\paragraph{BERTopic.}
+BERTopic \citep{grootendorst2022bertopic} clusters documents
+by their BERT embeddings and labels each cluster using
+class-based TF-IDF (c-TF-IDF). We customise the pipeline
+using UMAP \citep{mcinnes2018umap} for dimensionality
+reduction based on semantic relationships, and HDBSCAN
+\citep{campello2013hdbscan} for density-based clustering
+using Euclidean distance, chosen to produce robust,
+non-fragmented topic clusters. Unigrams and bigrams are
+retained for topic word extraction.Topic Intensity: 
+The frequency of occurrence of a particular topic in a period and
+category is measured through time to uncover the development of 
+research themes within specific subfields.
+\textit{Research Hypothesis:
+BERTopic will generate topics with greater semantic coherence than 
+LDA since BERTopic relies on embeddings and not bag of words 
+methodology.}
+
+\subsection{Temporal Drift Visualisation}
+
+\textbf{Truncated SVD} \citep{scikit-learn} reduces the 2D representation of the TF-IDF matrix; centroid points of periods are linked to visualize the trajectory of vocabulary used in the field at the macro level, based on
+labels for axes that correspond to the most extreme terms at each end of the axis. \textbf{t-SNE} \citep{vandermaaten2008} This is done by applying
+BERT to a random sample of 5,000 abstracts (perplexity 45).
+
+
+% ============================================================
+% 4. EXPERIMENTAL EVALUATION
+% ============================================================
+\section{Experimental Evaluation}
+\label{sec:evaluation}
+
+\subsection{Metrics and Setup}
+
+We evaluate each approach against three criteria:
+\textbf{consistency} (do findings replicate across
+methods?), \textbf{interpretability} (are outputs
+understandable to a domain reader?), and
+\textbf{alignment} (do findings match known milestones
+such as the rise of deep learning post-2012?).
+Interpretability and alignment are assessed qualitatively;
+we mitigate subjectivity by cross-referencing findings
+across all methods. Table~\ref{tab:summary} summarises
+the relative strengths of each approach.
+
+All preprocessing artefacts were saved and reused across
+experiments to guarantee consistent inputs. TF-IDF and
+n-gram features used \texttt{scikit-learn}
+\citep{scikit-learn}. BERT embeddings used the
+\texttt{BAAI/bge-base-en-v1.5} model from HuggingFace
+\citep{bge2023}. BERTopic used the \texttt{bertopic}
+library \citep{grootendorst2022bertopic} with UMAP
+\citep{mcinnes2018umap} and HDBSCAN
+\citep{campello2013hdbscan} for clustering.
+
+\begin{table}[H]
+\centering
+\caption{Qualitative comparison of all methods against
+evaluation criteria. \checkmark = strong,
+$\sim$ = moderate, $\times$ = weak.}
+\label{tab:summary}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Method} & \textbf{Consistency} &
+\textbf{Interpretability} & \textbf{Alignment} \\
+\midrule
+TF-IDF Unigrams     & \checkmark & \checkmark & \checkmark \\
+N-gram TF-IDF       & \checkmark & \checkmark & \checkmark \\
+BERT Embeddings     & $\times$   & $\times$   & $\times$   \\
+LDA                 & $\sim$     & $\sim$     & $\sim$     \\
+BERTopic            & \checkmark & $\sim$     & \checkmark \\
+SVD Trajectory      & \checkmark & $\sim$     & \checkmark \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Corpus Growth and Data Imbalance}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.80\linewidth, trim=0 30pt 0 30pt, clip]{figures/01_category_growth.png}
+  \caption{ArXiv AI subfield publication growth (1991--2021).
+           cs.LG dominates from 2015, reaching $\sim$37,000
+           papers annually by 2021.}
+  \label{fig:growth}
+\end{figure}
+
+Figure~\ref{fig:growth}indicates nearly flat publication production
+till about 2010, after which there is exponential increase
+due to cs.LG. This validates the extreme imbalance between
+periods: Period 4 is much larger compared to previous periods
+by a large margin. As recent papers will completely skew the numbers,
+the keyword and topic weights have been normalized everywhere.
+
+\subsection{Axis 1 Results: N-gram Key Terms per Period}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth, trim=0 40pt 0 40pt, clip]{figures/09_multi_phrases.png}
+  \caption{Top 10 bigram and trigram key terms per period
+           from n-gram TF-IDF analysis.}
+  \label{fig:phrases}
+\end{figure}
+
+Figure~\ref{fig:phrases} shows the most obvious picture of
+how research language developed. Between 1991–1998, common collocations
+are \textit{machine translation}, \textit{knowledge base},
+\textit{decision tree}, and \textit{speech recognition} —
+the vocabulary of symbolic AI and early NLP. By 1999--2006,
+\textit{logic program} indicating the combination of symbolic and probabilistic methodologies.
+In 2007--2014, \textit{machine learn} takes over alongside
+\textit{support vector} and \textit{reinforcement learn},
+signaling the shift towards statistics. In 2015–2021,
+\textit{machine learn} is overwhelmingly frequent
+(count $>15{,}000$), joined by \textit{deep neural},
+\textit{convolutional neural}, \textit{pre train}, and
+\textit{reinforcement learn} — reflects the language of the deep
+learning period. It verifies our hypothesis: n-grams uncover
+compound methodological terminology inaccessible to unigrams.
+
+\subsection{Axis 1 Results: Keyword Evolution Heatmap}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.72\linewidth, trim=0 30pt 0 30pt, clip]{figures/08_keywords_period_evolution.png}
+  \caption{Rise and decay of AI concepts (normalised TF-IDF).
+           Red = high score; purple = absent.}
+  \label{fig:evolution}
+\end{figure}
+
+Figure~\ref{fig:evolution} tracks 30 terms across all
+periods. Symbolic AI terms — \textit{grammar}, \textit{parse},
+\textit{logic} — score modestly early and disappear by
+Period 4. \textit{Deep} scores 0.0 in the first two periods,
+rises to 52.4 in 2007--2014, and reaches 2,114.4 by
+2015--2021. \textit{Network} grows from 7.5 to 3,635.9
+and \textit{learn} from 19.6 to 4,080.8. The transition
+accelerates sharply after 2014, consistent with the
+n-gram results. Agreement between both TF-IDF methods
+strengthens confidence that these are genuine field-level
+shifts rather than noise.
+
+\subsection{Axis 1 Results: Period Classification}
+
+A Logistic Regression classifier was trained to predict
+time period from TF-IDF representations. The classifier
+achieved an accuracy of \textbf{90.9}\%
+on the held-out test set.
+
+This result [confirms / partially confirms] our hypothesis
+that temporal linguistic drift is detectable from text
+representations alone. The fact that a simple linear
+classifier can distinguish periods with meaningful accuracy
+provides quantitative evidence that vocabulary-level
+changes across the four eras are systematic rather than
+random. This finding complements the qualitative evidence
+from the keyword analysis and n-gram results.
+
+\subsection{Axis 2 Results: LDA Topic Analysis}
+
+We applied LDA with $k=5$ topics to the preprocessed corpus
+using a bigram-aware \texttt{CountVectorizer} with a vocabulary
+of 1,000 features. Table~\ref{tab:lda} shows the top keywords
+for each discovered topic and our interpretation of each.
+
+\begin{table}[H]
+\centering
+\small
+\caption{LDA topic definitions (top keywords) and
+         interpretations.}
+\label{tab:lda}
+\begin{tabular}{cll}
+\toprule
+\textbf{Topic} & \textbf{Top Keywords} & \textbf{Interpretation} \\
+\midrule
+1 & learn, machine, machine learn, & General ML \\
+  & optimization, technique, cluster & Methods \\
+2 & function, distribution, sample, & Statistical / \\
+  & loss, bound, gradient, estimate & Learning Theory \\
+3 & agent, policy, human, environment, & Reinforcement \\
+  & user, question, reinforcement & Learning / Agents \\
+4 & graph, label, representation, train, & NLP / Knowledge \\
+  & domain, knowledge, speech, sentence & Representation \\
+5 & network, neural, neural network, & Deep Learning / \\
+  & image, deep, architecture, layer & Neural Networks \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.90\linewidth, trim=0 40pt 0 40pt, clip]{figures/lda_category_period_evolution.png}
+  \caption{LDA topic intensity across categories and periods.
+           Topic 4 (orange) grows in cs.CL; Topic 5 (green)
+           rises across all subfields from 2007.}
+  \label{fig:lda}
+\end{figure}
+
+Figure~\ref{fig:lda} and the underlying data reveal several
+clear patterns. In \texttt{cs.CL},Topic 4 (NLP and
+knowledge representation) is the prevalent topic that
+dominates the entire corpus and steadily increases in all four
+time periods, starting from 0.41 in 1991-1998 to 0.58 in
+2015-2021. It is the most prominent trend in the LDA output,
+indicating the continuous interest in representation learning
+and language understanding among the NLP community.
+Meanwhile, Topic 1 (general ML techniques) steadily
+declines from 0.27 to 0.11 in cs.CL during the same time
+period due to the specialisation of the subfield.
+
+In \texttt{cs.AI}, Topic 3 (reinforcement learning and
+agent-based models) continues to be a dominant theme
+across all periods, having a maximum value of 0.39 between
+1999–2006 and staying relatively constant at around 0.36 by
+2015–2021. This demonstrates the continued importance
+of the agent-based paradigm within the AI subfield, despite
+its increasing dominance in other parts of the discipline. Topic
+5 (deep learning and neural networks) goes from 0.04
+between 1991–1998 to
+
+In \texttt{cs.LG}, Concerning Topic 2 (statistical and mathematical learning theory), there is a pronounced jump upward, reaching from 0.11 in 1991--1998 to 0.31 in 1999--2006 and staying high until 2007--2014. It corresponds to the rise of statistics and the kernel machine learning framework in this time. In 2015--2021, Topic 5 (neural networks) reaches 0.21, corresponding to the migration of cs.LG to deep learning.
+
+The results partially support our hypothesis. LDA was able to detect meaningful thematic clusters corresponding to the evolution of each subfield. Nevertheless, the presence of the common term "learn" in all topics, as a result of its survival after the stopword removal procedure, blurs the discrimination power of the topic clusters. Indeed, it is well-known that the use of LDA on homogeneous-domain corpora is hindered by the saturation of topic-word probability distributions with the central terms of the field, which is why the separation between the topics suffers in comparison with what BERTopic can achieve via embedding clustering.
+
+\subsection{Axis 2 Results: BERTopic Evolution}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.90\linewidth, trim=0 30pt 0 30pt, clip]{figures/bert_category_period_evolution.png}
+  \caption{BERTopic topic intensity across categories and
+           periods. Topic 1 (teal) peaks in 2007--2014 then
+           declines sharply by 2015--2021.}
+  \label{fig:bert}
+\end{figure}
+
+Figure~\ref{fig:bert} Topic 1 is seen to dominate the beginning and middle stages,
+reaching its maximum value of 0.31 in cs.CL (2007-2014)
+and 0.30 in cs.LG (1999-2006), after which it declines sharply
+below 0.05 during 2015-2021. This is not an indication of a
+problem with BERTopic but a sign that there was actual diversification
+in the field: As the number of papers grew exponentially,
+researchers branched out into computer vision, reinforcement learning,
+language modelling.
+
+\subsection{Temporal Drift: SVD and t-SNE}
+
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[t]{0.48\linewidth}
+    \centering
+    \includegraphics[width=\linewidth, trim=0 30pt 0 30pt, clip]{figures/04_tfidf_trajectory.png}
+    \caption{Truncated SVD projection. Period centroids
+             trace a rightward ``buyer $\to$ learn''
+             semantic trajectory.}
+    \label{fig:trajectory}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.48\linewidth}
+    \centering
+    \includegraphics[width=\linewidth, trim=0 30pt 0 30pt, clip]{figures/03_embeddings_clustering.png}
+    \caption{t-SNE of BERT embeddings (5,000 abstracts).
+             Periods are interspersed: BERT organises
+             by topic, not era.}
+    \label{fig:tsne}
+  \end{minipage}
+\end{figure}
+
+Figure~\ref{fig:trajectory} centroids for periods shift
+in the direction to the right, with the biggest jump from
+Period 3 to Period 4, supporting the trend of vocabulary
+change acceleration since 2014. Figure~\ref{fig:tsne}
+reveals that BERT embeddings do not group based on the
+era of origin — abstracts from each era are scattered
+throughout the 2D space. This is an important negative
+result: BERT captures the topic level but not the era
+level of research, rendering TF-IDF more susceptible to
+vocabulary drift over time.
+
+\subsection{Error Analysis and Discussion}
+
+A judgment had to be made regarding the stop word list because although
+words like ``learn'' and ``network'' have discriminating power, their extremely
+high frequency in Period 4 could obscure other themes. This had an immediate
+impact on LDA because the term ``learn'' appears in all five topic-word
+frequency distributions, making the boundaries between the topics
+($>1{,}000$ features) Topic separation would be more effective.
+The intensity collapse of BERTopic between 2015-2021 indicates
+diversification but is incapable of characterizing the actual
+content of that diversity without investigating topic label
+lists. The t-SNE plot is influenced by class imbalance since
+Period 4 is prevalent in the 5,000-abstacts dataset, causing
+other time periods to become underrepresented geometrically.
+
+Nevertheless, results have shown high consistency across methods.
+TF-IDF keyword and n-gram extraction generated the most
+interpretable and reliable results. BERTopic brought an additional
+perspective on thematic diversification. The LDA model provided
+interpretable topics but was not as consistent with hyperparameters.
+BERT embeddings were found to be the least informative in era-level
+temporal analysis. One limitation of the approach is that the
+categorization method treats each category as static and
+non-overlapping while papers often overlap with subfields.
+
+
+% ============================================================
+% 5. TEAM CONTRIBUTIONS
+% ============================================================
+\section{Team Contributions}
+\label{sec:contributions}
+
+\textbf{Pavithraa Gangadhar} developed and established
+the complete data pipeline process, including the
+processes of loading, evaluating quality, cleaning, and
+segmentation of data based on time period. She created the
+text pre-processing strategy, which includes tokenisation,
+stopwords elimination, and lemmatisation, and developed the
+TF-IDF, n-gram, and transformer approaches for the creation
+of text representations. Finally, she performed exploratory
+data analysis, keyword extraction, similarity analysis, and
+classification of data by time period.
+
+\textbf{Jingting Gu} Used BERTopic modelling, applying
+the \texttt{BAAI/bge-base-en-v1.5} embedding model,
+with UMAP for dimensional reduction and HDBSCAN for density-based topic clustering.
+She included POS tagging within the preprocessing stage, employing WordNet tags to enhance
+lemmatisation efficiency, and designed a universal interface for all downstream visualization tools.
+She also constructed the pipeline orchestration layer that allows for automatic execution of all
+preprocessing, modelling, and visualization modules through one single access point.
+
+\textbf{Chenyang Yan} was responsible for designing and implementing the entire
+visualization tool suite, incorporating t-SNE for semantic clustering and Truncated SVD for macroscopic trajectory analysis. He devised and optimized the LDA model pipeline himself, crafting a novel context-based keyword extraction system capable of identifying hidden transitions in topics over different time periods. He also created a proprietary stopword list specific to the domain under study.
+
+\textbf{Balarammahanti Siva Ganesh} The data preprocessing pipeline and dataset engineering
+process were applied to obtain a clean structured
+dataset after dealing with missing data, inconsistencies,
+and duplications in the raw dataset. He built
+preprocessing scripts that can be reused in the
+\texttt{src} directory, created structured features for
+analysis, and applied temporal segmentation to set the
+baseline distribution of the dataset.
+
+\textbf{Ayush Bhadauria}coordinating the entire project
+workflow by distributing tasks among the team members
+depending on their strong points and making sure
+that everything was included into one workflow.
+The conversations with the other members were made in
+order to know how they solved the task and what they
+obtained; all this was used for writing this report.
+All the information obtained during our teamwork was
+analyzed and written into the report using the same
+methods, evaluation and conclusion techniques.
+
+
+% ============================================================
+% 6. CONCLUSIONS
+% ============================================================
+\section{Conclusions}
+\label{sec:conclusions}
+
+This study employed a multi-method text analytics workflow that was
+applied to a set of 30-year arXiv abstracts from the AI, ML, and NLP subfields.
+In all methods, the results reveal the same consistent pattern, as the corpus moves
+from symbolic AI and formalism in the 1990s, then to probability and statistical
+learning in the 2000s, then to neural approaches starting from 2007, up to a very
+diverse and transformer-led corpus since 2015.
+
+The best methods to identify this shift were those using TF-IDF keyword and n-gram
+analysis. Multi-word terms
+such as \textit{convolutional neural}, \textit{pre train},
+and \textit{reinforcement learn} were important signals that
+could not be found using unigrams. BERTopic introduced an interesting point: the
+current age can be described through the fragmentation of scientific research into
+many specialized areas, seen from the sharp decrease in intensity per topic since
+2014. The LDA algorithm identified interpretable thematic groups that largely
+correlated with the keyword trends but was somewhat more dependent on the value of
+hyperparameters compared to BERTopic.
+
+The embeddings generated by BERT were not grouped according to historical periods,
+and this result can be considered quite useful. Semantic representations capture the
+meaning of scientific research at the level of topics, while TF-IDF-based vectors
+are more suitable for studying vocabulary change over historical periods.
+
+Possible further steps may include solving the problem of class imbalance,
+developing quantitative interpretability metrics, and analyzing not only abstracts but
+also papers or citation networks.
+
+Code repository: \url{https://github.com/gyy2333/uob-ematm0067-team23}
+
+
+% ============================================================
+% REFERENCES
+% ============================================================
+\bibliographystyle{unsrt}
+\bibliography{references}
+
+\end{document}
